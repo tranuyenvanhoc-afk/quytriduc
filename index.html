@@ -228,6 +228,8 @@ html.boxed .qtd-footer { margin-top:28px; margin-bottom:20px; }
 @media (hover:hover) and (pointer:fine) { .ac-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); } .ac-card:hover .ac-icon { background:var(--qtd-green); color:#fff; } }
 @media (max-width:1000px){ .ac-grid{ gap:18px; } .ac-card{ width:calc((100% - 36px) / 3); padding:26px 20px 24px; } .ac-card h3{ font-size:16.5px; } }
 @media (max-width:640px){ .ac-grid{ gap:12px; } .ac-card{ width:calc((100% - 12px) / 2); padding:20px 16px; } .ac-icon{ width:48px; height:48px; margin-bottom:14px; } .ac-icon svg{ width:22px; height:22px; } .ac-card h3{ font-size:14.5px; min-height:2.7em; } }
+.hero-gap { height:112px; }
+@media (max-width:600px){ .hero-gap{ height:64px; } }
 @media (max-width:900px){ .hero-photo{ min-height:520px; } .hero-photo .wrap{ padding:56px 20px 64px; } }
 </style>
 </head>
@@ -275,6 +277,8 @@ html.boxed .qtd-footer { margin-top:28px; margin-bottom:20px; }
     <button class="hero-dot" data-i="5" aria-label="Ảnh 6"></button>
   </div>
 </section>
+
+<div class="hero-gap" aria-hidden="true"></div>
 
 <section class="stat-photo-banner">
   <div class="stat-bg" style="background-image:url('images/stat-banner-hands.jpg');"></div>
