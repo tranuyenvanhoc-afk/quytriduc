@@ -8,8 +8,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
-  --qtd-green: #16A34A; --qtd-green-dark: #0E6B3E; --qtd-green-light: #E4F8EC;
-  --qtd-gold: #E8A33D; --qtd-gold-dark: #C8842A; --qtd-cream: #F6FCF9;
+  --qtd-green: #22A95C; --qtd-green-dark: #1D8350; --qtd-green-light: #EDF8E9;
+  --qtd-mint: #AEE6A4; --qtd-mint-hover: #9BDC8F; --qtd-on-mint: #1B6309;
+  --qtd-mint-grad: linear-gradient(120deg, #DDF5D6 0%, #AEE6A4 55%, #93DA86 100%);
+  --qtd-deep-grad: linear-gradient(120deg, #22A95C 0%, #1D8350 55%, #1B6309 100%);
+  --qtd-gold: #E8A33D; --qtd-gold-dark: #C8842A; --qtd-cream: #F7FCFA;
   --qtd-text: #23322A; --qtd-text-soft: #5C6B62; --qtd-white: #FFFFFF; --qtd-border: #DCEFE2;
   --radius-sm: 8px; --radius-md: 14px; --radius-lg: 22px;
   --shadow-sm: 0 2px 10px rgba(43,43,43,0.06); --shadow-md: 0 10px 30px rgba(31,109,72,0.12); --maxw: 1200px;
@@ -26,7 +29,7 @@ a { color:var(--qtd-green); text-decoration:none; }
 .section { padding:72px 0; } .section-tight { padding:40px 0; }
 @media (max-width:600px){ .section{ padding:46px 0; } .section-tight{ padding:28px 0; } .wrap{ padding:0 18px; } }
 
-.qtd-header { position:sticky; top:0; z-index:50; background:rgba(246,252,249,.9); backdrop-filter:blur(8px); border-bottom:1px solid var(--qtd-border); }
+.qtd-header { position:sticky; top:0; z-index:50; background:linear-gradient(90deg, rgba(247,252,245,.96) 0%, rgba(214,243,206,.96) 45%, rgba(174,230,164,.96) 100%); backdrop-filter:blur(8px); border-bottom:1px solid rgba(27,99,9,.10); box-shadow:0 2px 14px rgba(27,99,9,.06); }
 .qtd-header .wrap { display:flex; align-items:center; justify-content:space-between; padding:14px 24px; }
 .qtd-brand { display:flex; align-items:center; gap:10px; font-family:'Baloo 2',sans-serif; font-weight:700; font-size:18px; color:var(--qtd-green-dark); }
 .qtd-brand .dot { width:10px; height:10px; border-radius:50%; background:var(--qtd-green); }
@@ -34,9 +37,9 @@ a { color:var(--qtd-green); text-decoration:none; }
 .qtd-brand-logos img { height:72px; width:auto; display:block; }
 .qtd-nav { display:flex; align-items:center; gap:26px; flex-wrap:wrap; }
 .qtd-nav a { font-size:15px; font-weight:600; color:var(--qtd-text); opacity:.85; padding-bottom:4px; border-bottom:2px solid transparent; transition:color .2s ease, border-color .2s ease; }
-.qtd-nav a:hover, .qtd-nav a.is-active { color:var(--qtd-green); opacity:1; border-bottom-color:var(--qtd-green); }
+.qtd-nav a:hover, .qtd-nav a.is-active { color:var(--qtd-on-mint); opacity:1; border-bottom-color:var(--qtd-on-mint); }
 .qtd-nav .has-dropdown { position:relative; display:inline-flex; align-items:center; gap:4px; font-size:15px; font-weight:600; color:var(--qtd-text); opacity:.85; cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color .2s ease, border-color .2s ease; }
-.qtd-nav .has-dropdown:hover, .qtd-nav .has-dropdown:focus-within { color:var(--qtd-green); opacity:1; border-bottom-color:var(--qtd-green); }
+.qtd-nav .has-dropdown:hover, .qtd-nav .has-dropdown:focus-within { color:var(--qtd-on-mint); opacity:1; border-bottom-color:var(--qtd-on-mint); }
 .qtd-nav .has-dropdown .chevron { font-size:11px; transition:transform .2s ease; }
 .qtd-nav .has-dropdown:hover .chevron, .qtd-nav .has-dropdown:focus-within .chevron { transform:rotate(180deg); }
 .qtd-dropdown { position:absolute; top:100%; left:0; margin-top:16px; background:var(--qtd-white); border:1px solid var(--qtd-border); border-radius:var(--radius-md); box-shadow:var(--shadow-md); min-width:220px; padding:8px; opacity:0; visibility:hidden; transform:translateY(-6px); transition:opacity .2s ease, transform .2s ease, visibility .2s; z-index:60; }
@@ -47,8 +50,8 @@ a { color:var(--qtd-green); text-decoration:none; }
 .qtd-mobile-label { display:block; padding:14px 24px 4px; font-size:12px; font-weight:700; letter-spacing:.04em; color:var(--qtd-text-soft); text-transform:uppercase; }
 .qtd-mobile-nav a.qtd-mobile-sub { padding-left:36px; font-weight:500; }
 @media (max-width:600px){ .qtd-brand-logos img{ height:44px; } .qtd-header .wrap{ gap:8px; } .qtd-cta{ padding:8px 11px; font-size:12px; } }
-.qtd-cta { display:inline-flex; align-items:center; gap:6px; background:var(--qtd-green); color:#fff !important; padding:10px 18px; border-radius:999px; font-weight:700; font-size:14px; white-space:nowrap; box-shadow:var(--shadow-sm); }
-.qtd-cta:hover { background:var(--qtd-green-dark); }
+.qtd-cta { display:inline-flex; align-items:center; gap:6px; background:var(--qtd-deep-grad); color:#fff !important; padding:10px 18px; border-radius:999px; font-weight:700; font-size:14px; white-space:nowrap; box-shadow:0 6px 16px rgba(27,99,9,.22); transition:filter .2s ease, transform .2s ease; }
+.qtd-cta:hover { filter:brightness(1.08); transform:translateY(-1px); }
 
 .qtd-hero { background:linear-gradient(180deg,var(--qtd-green-light) 0%,var(--qtd-cream) 100%); padding:64px 0 48px; text-align:center; }
 .qtd-eyebrow { display:inline-block; background:var(--qtd-white); border:1px solid var(--qtd-border); color:var(--qtd-green); font-weight:700; font-size:13px; letter-spacing:.03em; padding:6px 14px; border-radius:999px; margin-bottom:18px; }
@@ -64,8 +67,8 @@ a { color:var(--qtd-green); text-decoration:none; }
 
 .btn { display:inline-flex; align-items:center; gap:8px; justify-content:center; padding:12px 22px; border-radius:999px; font-weight:700; font-size:15px; border:none; cursor:pointer; transition:all .2s ease; }
 .btn:focus-visible { outline:2px solid var(--qtd-gold); outline-offset:2px; }
-.btn-fresh { background:var(--qtd-green); color:#fff; }
-.btn-fresh:hover { background:var(--qtd-green-dark); }
+.btn-fresh { background:var(--qtd-mint-grad); color:var(--qtd-on-mint); box-shadow:0 6px 16px rgba(27,99,9,.12); }
+.btn-fresh:hover { filter:brightness(.97); transform:translateY(-1px); }
 .btn-ghost { background:transparent; color:var(--qtd-green); border:1.5px solid var(--qtd-green); }
 .btn-ghost:hover { background:var(--qtd-green-light); }
 .btn-ghost-light { background:transparent; color:#fff; border:1.5px solid #fff; }
@@ -79,7 +82,7 @@ a { color:var(--qtd-green); text-decoration:none; }
 .sample-note .sn-icon { flex:none; }
 .sample-note .sn-text { flex:1; }
 
-.qtd-footer { background:linear-gradient(160deg, var(--qtd-green-dark) 0%, #0A4A32 100%); color:#E7F2EC; margin-top:40px; }
+.qtd-footer { background:linear-gradient(160deg, var(--qtd-green-dark) 0%, #15693F 100%); color:#E7F2EC; margin-top:40px; }
 .qtd-footer a { color:#E7F2EC; opacity:.85; }
 .qtd-footer a:hover { opacity:1; }
 .footer-grid { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1.05fr) auto minmax(0,.75fr); gap:44px; padding:64px 0 40px; }
@@ -128,7 +131,7 @@ a { color:var(--qtd-green); text-decoration:none; }
 .hero-slides { position:absolute; inset:0; z-index:-2; }
 .hero-photo .hero-bg { position:absolute; inset:0; background-size:cover; background-position:center; opacity:0; transition:opacity 1.4s ease; }
 .hero-photo .hero-bg.is-active { opacity:1; }
-.hero-photo::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(14,42,26,.35) 0%, rgba(9,31,19,.55) 55%, rgba(7,26,16,.88) 100%); z-index:-1; }
+.hero-photo::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(18,70,44,.35) 0%, rgba(14,56,36,.55) 55%, rgba(12,50,32,.88) 100%); z-index:-1; }
 .hero-photo .wrap { padding:80px 24px 56px; }
 .hero-photo .qtd-eyebrow { background:rgba(255,255,255,.14); border-color:rgba(255,255,255,.35); color:#fff; backdrop-filter:blur(4px); }
 .hero-photo h1 { color:#fff; text-align:left; }
@@ -160,7 +163,7 @@ a { color:var(--qtd-green); text-decoration:none; }
 .pagination { display:flex; justify-content:center; align-items:center; gap:8px; margin-top:44px; flex-wrap:wrap; }
 .page-btn { min-width:40px; height:40px; padding:0 6px; border-radius:999px; border:1px solid var(--qtd-border); background:var(--qtd-white); color:var(--qtd-text); font-weight:700; font-size:14px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; transition:background .2s ease, color .2s ease, border-color .2s ease; }
 .page-btn:hover:not(:disabled) { border-color:var(--qtd-green); color:var(--qtd-green); }
-.page-btn.is-active { background:var(--qtd-green); border-color:var(--qtd-green); color:#fff; }
+.page-btn.is-active { background:var(--qtd-mint-grad); border-color:var(--qtd-mint); color:var(--qtd-on-mint); }
 .page-btn:disabled { opacity:.4; cursor:not-allowed; }
 @media (max-width:900px){ .news-grid{ grid-template-columns:repeat(2,1fr); } }
 @media (max-width:600px){ .news-grid{ grid-template-columns:1fr; } }
@@ -171,9 +174,9 @@ a { color:var(--qtd-green); text-decoration:none; }
 .video-card { position:relative; border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-md); aspect-ratio:16/9; cursor:pointer; background:#000; }
 .video-card img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease; }
 .video-card:hover img { transform:scale(1.05); }
-.video-card::before { content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(6,40,22,.4) 100%); pointer-events:none; z-index:1; }
+.video-card::before { content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(14,78,48,.4) 100%); pointer-events:none; z-index:1; }
 .video-card .play-btn { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; z-index:2; }
-.video-card .play-circle { width:74px; height:74px; border-radius:50%; background:rgba(255,255,255,.94); display:flex; align-items:center; justify-content:center; box-shadow:0 8px 24px rgba(6,40,22,.3); transition:transform .25s ease; }
+.video-card .play-circle { width:74px; height:74px; border-radius:50%; background:rgba(255,255,255,.94); display:flex; align-items:center; justify-content:center; box-shadow:0 8px 24px rgba(14,78,48,.3); transition:transform .25s ease; }
 .video-card .play-circle svg { margin-left:4px; }
 .video-card:hover .play-circle { transform:scale(1.1); }
 .video-card iframe { width:100%; height:100%; border:0; display:block; }
@@ -181,7 +184,7 @@ a { color:var(--qtd-green); text-decoration:none; }
 
 .stat-photo-banner { position:relative; padding:64px 0; text-align:center; overflow:hidden; isolation:isolate; }
 .stat-photo-banner .stat-bg { position:absolute; inset:0; background-size:cover; background-position:center; z-index:-2; }
-.stat-photo-banner::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(6,40,22,.6) 0%, rgba(6,40,22,.72) 100%); z-index:-1; }
+.stat-photo-banner::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(14,78,48,.6) 0%, rgba(14,78,48,.72) 100%); z-index:-1; }
 .stat-photo-banner h2 { color:#fff; margin-bottom:36px; }
 .stat-row { display:flex; justify-content:center; gap:60px; flex-wrap:wrap; }
 .stat-item { text-align:center; }
@@ -196,14 +199,15 @@ a { color:var(--qtd-green); text-decoration:none; }
 .testimonial-name { font-size:14px; color:var(--qtd-text-soft); margin:0; }
 
 /* Khoảng cách giữa các section: bản gọn (đã chọn) */
-html:root .section { padding:40px 0; } html:root .section-tight { padding:22px 0; }
-html:root .stat-photo-banner { padding:40px 0; } html:root .stat-photo-banner h2 { margin-bottom:24px; }
+html:root .section { padding:34px 0; } html:root .section-tight { padding:16px 0; }
+html:root .stat-photo-banner { padding:34px 0; } html:root .stat-photo-banner h2 { margin-bottom:20px; }
 html:root .hero-photo { min-height:460px; } html:root .hero-photo .wrap { padding-top:56px; padding-bottom:44px; }
-html:root .news-hero, html:root .activities-hero { padding-top:40px; padding-bottom:64px; min-height:0; }
-html:root .qtd-footer { margin-top:16px; } html:root .footer-grid { padding:40px 0 28px; }
-html:root .section > .wrap > h2 + p, html:root .section > .wrap > .qtd-eyebrow + h2 + p { margin-bottom:22px !important; }
-html:root .cinematic, html:root .final-cta { padding-top:48px; padding-bottom:48px; }
-@media (max-width:600px){ html:root .section { padding:30px 0; } html:root .section-tight { padding:18px 0; } }
+html:root .news-hero, html:root .activities-hero { padding-top:36px; padding-bottom:60px; min-height:0; }
+html:root .qtd-footer { margin-top:0; } html:root .footer-grid { padding:38px 0 26px; }
+html:root .section > .wrap > h2 + p, html:root .section > .wrap > .qtd-eyebrow + h2 + p { margin-bottom:20px !important; }
+html:root .qtd-eyebrow { margin-bottom:12px; }
+html:root .cinematic, html:root .final-cta { padding-top:42px; padding-bottom:42px; }
+@media (max-width:600px){ html:root .section { padding:26px 0; } html:root .section-tight { padding:12px 0; } }
 
 /* Chế độ xem thử "có khung" (?layout=boxed): các section nền màu không tràn hết chiều ngang */
 html.boxed body { background:#E7F1EA; }
@@ -215,9 +219,12 @@ html.boxed .qtd-footer { margin-top:28px; margin-bottom:20px; }
 
 .hero-photo { min-height:600px; align-items:stretch; }
 .hero-photo .wrap { width:100%; display:flex; flex-direction:column; justify-content:flex-end; padding:72px 24px 72px; }
-.hero-text { max-width:760px; }
-.hero-photo h1 { font-size:clamp(34px, 5vw, 60px); line-height:1.12; margin:0 0 18px; }
-.hero-photo p.lead { max-width:640px; font-size:17.5px; }
+.hero-text { max-width:1000px; }
+.hero-photo h1 { font-size:clamp(32px, 4.8vw, 64px); line-height:1.1; letter-spacing:.01em; margin:0 0 16px; text-shadow:0 2px 18px rgba(0,0,0,.35); }
+.hero-photo p.lead { max-width:720px; font-size:clamp(16.5px, 1.5vw, 20px); margin-bottom:24px; text-shadow:0 1px 10px rgba(0,0,0,.35); }
+html:root .hero-home { min-height:clamp(560px, 82vh, 800px); }
+.hero-home::before { content:''; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg, rgba(10,52,32,.55) 0%, rgba(10,52,32,.25) 45%, rgba(10,52,32,0) 75%); }
+html:root .hero-home .wrap { padding-top:80px; padding-bottom:88px; }
 .news-date { display:block; font-size:12.5px; color:var(--qtd-text-soft); font-weight:600; margin-bottom:6px; }
 .news-grid .news-body h3 { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
 .ac-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:24px; }
@@ -225,12 +232,13 @@ html.boxed .qtd-footer { margin-top:28px; margin-bottom:20px; }
 .ac-icon { width:60px; height:60px; border-radius:50%; background:var(--qtd-green-light); color:var(--qtd-green-dark); display:flex; align-items:center; justify-content:center; margin-bottom:22px; transition:background .25s ease, color .25s ease; }
 .ac-icon svg { width:26px; height:26px; }
 .ac-card h3 { font-size:18px; margin:0; line-height:1.35; min-height:2.7em; }
-@media (hover:hover) and (pointer:fine) { .ac-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); } .ac-card:hover .ac-icon { background:var(--qtd-green); color:#fff; } }
+@media (hover:hover) and (pointer:fine) { .ac-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); } .ac-card:hover .ac-icon { background:var(--qtd-mint-grad); color:var(--qtd-on-mint); } }
 @media (max-width:1000px){ .ac-grid{ gap:18px; } .ac-card{ width:calc((100% - 36px) / 3); padding:26px 20px 24px; } .ac-card h3{ font-size:16.5px; } }
 @media (max-width:640px){ .ac-grid{ gap:12px; } .ac-card{ width:calc((100% - 12px) / 2); padding:20px 16px; } .ac-icon{ width:48px; height:48px; margin-bottom:14px; } .ac-icon svg{ width:22px; height:22px; } .ac-card h3{ font-size:14.5px; min-height:2.7em; } }
-.hero-gap { height:112px; }
-@media (max-width:600px){ .hero-gap{ height:64px; } }
-@media (max-width:900px){ .hero-photo{ min-height:520px; } .hero-photo .wrap{ padding:56px 20px 64px; } }
+.hero-gap { height:48px; }
+@media (max-width:600px){ .hero-gap{ height:28px; } }
+@media (max-width:900px){ html:root .hero-home{ min-height:520px; } html:root .hero-home .wrap{ padding:56px 20px 64px; } }
+@media (max-width:600px){ html:root .hero-home{ min-height:480px; } }
 </style>
 </head>
 <body>
@@ -249,7 +257,7 @@ html.boxed .qtd-footer { margin-top:28px; margin-bottom:20px; }
   <nav class="qtd-mobile-nav" id="qtd-mobile-nav"><a href="index.html">Trang chủ</a><a href="pages/gioithieu.html">Giới thiệu</a><a href="pages/tintuc.html">Tin tức</a><a href="pages/gocamxuc.html">Góc cảm xúc</a></nav>
 </header>
 
-<section class="hero-photo">
+<section class="hero-photo hero-home">
   <div class="hero-slides">
     <div class="hero-bg is-active" style="background-image:url('images/chung-nhan-caf-banner.jpg');"></div>
     <div class="hero-bg" style="background-image:url('images/cau-tri-duc-7-khanh-thanh.jpg');"></div>
@@ -260,9 +268,9 @@ html.boxed .qtd-footer { margin-top:28px; margin-bottom:20px; }
   </div>
   <div class="wrap">
     <div class="hero-text">
-      <span class="qtd-eyebrow">GIEO MẦM HẠNH PHÚC — THÊM CHÚT AN VUI</span>
-      <h1>Mỗi đóng góp là một<br>hành trình có thật</h1>
-      <p class="lead">Quỹ Trí Đức đồng hành cùng trẻ em, người già và các vùng khó khăn trên khắp Việt Nam — với 94 dự án đã hoàn thành và hơn 30 tỷ đồng đã được giải ngân minh bạch.</p>
+      <span class="qtd-eyebrow">QUỸ TỪ THIỆN XÃ HỘI TRÍ ĐỨC</span>
+      <h1>GIEO MẦM HẠNH PHÚC —<br>THÊM CHÚT AN VUI</h1>
+      <p class="lead">Góp phần tạo nên những giá trị tốt đẹp, bền vững cho cộng đồng.</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;">
         <a href="pages/tintuc.html" class="btn btn-ghost-light">Xem tin tức</a>
       </div>
@@ -285,10 +293,10 @@ html.boxed .qtd-footer { margin-top:28px; margin-bottom:20px; }
   <div class="wrap">
     <h2>Những con số biết nói</h2>
     <div class="stat-row">
-      <div class="stat-item"><span class="stat-label">Thành viên</span><span class="stat-num" data-count="200" data-suffix="+">0</span></div>
-      <div class="stat-item"><span class="stat-label">Dự án hoàn thành</span><span class="stat-num" data-count="94">0</span></div>
+      <div class="stat-item"><span class="stat-label">Năm thành lập</span><span class="stat-num" data-count="2018">0</span></div>
+      <div class="stat-item"><span class="stat-label">Dự án đã thực hiện</span><span class="stat-num" data-count="434">0</span></div>
       <div class="stat-item"><span class="stat-label">Cây cầu Trí Đức</span><span class="stat-num" data-count="8">0</span></div>
-      <div class="stat-item"><span class="stat-label">Đã giải ngân</span><span class="stat-num" data-count="30" data-suffix=" tỷ đ+">0</span></div>
+      <div class="stat-item"><span class="stat-label">Tổng kinh phí</span><span class="stat-num" data-count="57" data-suffix=" tỷ đ+">0</span></div>
     </div>
   </div>
 </section>
@@ -299,12 +307,12 @@ html.boxed .qtd-footer { margin-top:28px; margin-bottom:20px; }
       <div class="values-content fade-in">
         <span class="qtd-eyebrow">GIÁ TRỊ CỐT LÕI</span>
         <h2>Giá Trị Cốt Lõi</h2>
-        <p>Quỹ Trí Đức được thành lập với ý niệm ban đầu giản dị và chân phương là mang đến những giá trị tốt đẹp cho cộng đồng. Cái tên Trí Đức cũng thể hiện rõ sự tâm huyết của người sáng lập quỹ: "Trí" là sự thông tuệ, sáng suốt, thấu hiểu; "Đức" là sự tử tế, chính trực. Đây là hai điều chi phối mọi thứ của một con người nhưng phải tích lũy từng chút mà thành, không phải là việc nhất thời mà là việc lâu dài của cả một đời người. "Trí tuệ" và "Đạo đức" chính là 2 giá trị vững chắc của Quỹ.</p>
+        <p>Quỹ Trí Đức được hình thành từ ý niệm ban đầu giản dị và chân phương là mang đến những giá trị tốt đẹp cho cộng đồng bằng sự sẻ chia chân thành và những hành động thiết thực. Tên gọi Trí Đức gửi gắm tâm huyết của người sáng lập về hai giá trị nền tảng của mỗi con người: “Trí” là sự thông tuệ, sáng suốt và thấu hiểu; “Đức” là sự tử tế, chính trực và lòng nhân ái. Cả hai đều cần được vun bồi qua thời gian, bằng sự học hỏi, rèn luyện và thực hành mỗi ngày.</p>
         <a href="pages/gioithieu.html" class="btn btn-ghost">Xem Thêm</a>
       </div>
       <div class="video-card fade-in" id="qtd-video-card" data-youtube="4aE4XGNQook" role="button" tabindex="0" aria-label="Phát video giới thiệu Quỹ Trí Đức">
         <img src="images/video-thumb-gia-tri-cot-loi.jpg" alt="Video giới thiệu Quỹ Trí Đức" loading="lazy">
-        <div class="play-btn"><div class="play-circle"><svg width="24" height="24" viewBox="0 0 24 24" fill="#16A34A"><path d="M8 5v14l11-7z"/></svg></div></div>
+        <div class="play-btn"><div class="play-circle"><svg width="24" height="24" viewBox="0 0 24 24" fill="#22A95C"><path d="M8 5v14l11-7z"/></svg></div></div>
       </div>
     </div>
   </div>
@@ -316,12 +324,12 @@ html.boxed .qtd-footer { margin-top:28px; margin-bottom:20px; }
     <h2 style="text-align:center;">6 Lĩnh Vực Trọng Tâm</h2>
     <p style="text-align:center;max-width:none;margin:0 auto 36px;">Với Quỹ Trí Đức, mỗi lĩnh vực là một hành trình gieo mầm hạnh phúc cho cộng đồng.</p>
     <div class="ac-grid">
-      <a class="ac-card fade-in" href="pages/tintuc.html#giao-duc"><div class="ac-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8l10-4 10 4-10 4-10-4Z" stroke-linejoin="round"/><path d="M6 10.5V16c0 1.5 2.5 3 6 3s6-1.5 6-3v-5.5" /></svg></div><h3>Tài trợ giáo dục</h3></a>
-      <a class="ac-card fade-in" href="pages/tintuc.html#nguoi-ngheo"><div class="ac-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-9.5-8.9A5 5 0 0 1 12 6a5 5 0 0 1 9.5 5.1C19 15.6 12 20 12 20Z" stroke-linejoin="round"/></svg></div><h3>Vì người nghèo</h3></a>
+      <a class="ac-card fade-in" href="pages/tintuc.html#giao-duc"><div class="ac-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8l10-4 10 4-10 4-10-4Z" stroke-linejoin="round"/><path d="M6 10.5V16c0 1.5 2.5 3 6 3s6-1.5 6-3v-5.5" /></svg></div><h3>Đồng hành cùng giáo dục</h3></a>
       <a class="ac-card fade-in" href="pages/tintuc.html#nong-thon-moi"><div class="ac-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 16c2-3 6-5 10-5s8 2 10 5" stroke-linecap="round"/><path d="M5 16v4M9 13.6V20M15 13.6V20M19 16v4" stroke-linecap="round"/></svg></div><h3>Xây dựng nông thôn mới</h3></a>
+      <a class="ac-card fade-in" href="pages/tintuc.html#suc-khoe"><div class="ac-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-9.5-8.9A5 5 0 0 1 12 6a5 5 0 0 1 9.5 5.1C19 15.6 12 20 12 20Z" stroke-linejoin="round"/></svg></div><h3>Chăm sóc sức khỏe &amp; hỗ trợ cộng đồng</h3></a>
       <a class="ac-card fade-in" href="pages/tintuc.html#thanh-nien"><div class="ac-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8.5" cy="8" r="3"/><circle cx="16" cy="9" r="2.5"/><path d="M2.5 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14.5 14.5c2.8.3 5 2.6 5 5.5" stroke-linecap="round"/></svg></div><h3>Đồng hành cùng thanh niên</h3></a>
-      <a class="ac-card fade-in" href="pages/tintuc.html#ton-giao"><div class="ac-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21c-4-3-4-7-4-9a4 4 0 0 1 4-4 4 4 0 0 1 4 4c0 2 0 6-4 9Z" stroke-linejoin="round"/><path d="M12 12c-3-1-5-3-5-6M12 12c3-1 5-3 5-6" stroke-linecap="round"/></svg></div><h3>Hỗ trợ tôn giáo</h3></a>
-      <a class="ac-card fade-in" href="pages/tintuc.html#thien-tai"><div class="ac-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 9c2-2 4-2 6 0s4 2 6 0 4-2 6 0" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Khắc phục thiên tai</h3></a>
+      <a class="ac-card fade-in" href="pages/tintuc.html#ton-giao"><div class="ac-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21c-4-3-4-7-4-9a4 4 0 0 1 4-4 4 4 0 0 1 4 4c0 2 0 6-4 9Z" stroke-linejoin="round"/><path d="M12 12c-3-1-5-3-5-6M12 12c3-1 5-3 5-6" stroke-linecap="round"/></svg></div><h3>Hoạt động tôn giáo</h3></a>
+      <a class="ac-card fade-in" href="pages/tintuc.html#dac-biet"><div class="ac-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 9c2-2 4-2 6 0s4 2 6 0 4-2 6 0" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Chia sẻ trong hoàn cảnh đặc biệt</h3></a>
     </div>
   </div>
 </section>
@@ -345,7 +353,7 @@ html.boxed .qtd-footer { margin-top:28px; margin-bottom:20px; }
       </a>
       <a class="news-card" href="pages/tin/qua-tet-binh-ngo-2026-loc-den-moi-nha.html">
         <div class="news-media"><img src="images/tin/1-3.jpg" alt="Quà Tết Bính Ngọ 2026 – LỘC ĐẾN MỌI NHÀ" loading="lazy"></div>
-        <div class="news-body"><span class="news-date">22/01/2026</span><span class="tag tag">Cộng đồng</span><h3>Quà Tết Bính Ngọ 2026 – LỘC ĐẾN MỌI NHÀ</h3></div>
+        <div class="news-body"><span class="news-date">22/01/2026</span><span class="tag tag">Hỗ trợ cộng đồng</span><h3>Quà Tết Bính Ngọ 2026 – LỘC ĐẾN MỌI NHÀ</h3></div>
       </a>
       <a class="news-card" href="pages/tin/tong-ket-hoat-dong-quy-tri-duc-nam-2025.html">
         <div class="news-media"><img src="images/tin/14.png" alt="Tổng Kết Hoạt Động Quỹ Trí Đức Năm 2025" loading="lazy"></div>
@@ -353,7 +361,7 @@ html.boxed .qtd-footer { margin-top:28px; margin-bottom:20px; }
       </a>
       <a class="news-card" href="pages/tin/tong-ket-hoat-dong-huong-ve-mien-trung-2025.html">
         <div class="news-media"><img src="images/tin/16-1.jpg" alt="Tổng Kết Hoạt Động Hướng Về Miền Trung 2025" loading="lazy"></div>
-        <div class="news-body"><span class="news-date">15/12/2025</span><span class="tag tag">Khắc phục thiên tai</span><h3>Tổng Kết Hoạt Động Hướng Về Miền Trung 2025</h3></div>
+        <div class="news-body"><span class="news-date">15/12/2025</span><span class="tag tag">Hoàn cảnh đặc biệt</span><h3>Tổng Kết Hoạt Động Hướng Về Miền Trung 2025</h3></div>
       </a>
     </div>
     <div style="text-align:center;margin-top:34px;"><a href="pages/tintuc.html" class="btn btn-ghost">Xem thêm tin tức</a></div>
@@ -380,7 +388,7 @@ html.boxed .qtd-footer { margin-top:28px; margin-bottom:20px; }
       </div>
       <div class="footer-col">
         <h4>CÁC HOẠT ĐỘNG</h4>
-        <ul class="footer-links"><li><a href="pages/tintuc.html#giao-duc">Tài trợ giáo dục</a></li><li><a href="pages/tintuc.html#nguoi-ngheo">Vì người nghèo</a></li><li><a href="pages/tintuc.html#nong-thon-moi">Xây dựng nông thôn mới</a></li><li><a href="pages/tintuc.html#thanh-nien">Đồng hành cùng thanh niên</a></li><li><a href="pages/tintuc.html#ton-giao">Hỗ trợ tôn giáo</a></li><li><a href="pages/tintuc.html#thien-tai">Khắc phục thiên tai</a></li></ul>
+        <ul class="footer-links"><li><a href="pages/tintuc.html#giao-duc">Đồng hành cùng giáo dục</a></li><li><a href="pages/tintuc.html#nong-thon-moi">Xây dựng nông thôn mới</a></li><li><a href="pages/tintuc.html#suc-khoe">Sức khỏe &amp; hỗ trợ cộng đồng</a></li><li><a href="pages/tintuc.html#thanh-nien">Đồng hành cùng thanh niên</a></li><li><a href="pages/tintuc.html#ton-giao">Hoạt động tôn giáo</a></li><li><a href="pages/tintuc.html#dac-biet">Chia sẻ hoàn cảnh đặc biệt</a></li></ul>
       </div>
       <div class="footer-col">
         <h4>LIÊN HỆ</h4>
