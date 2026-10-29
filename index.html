@@ -227,14 +227,31 @@ html:root .hero-home { min-height:clamp(560px, 82vh, 800px); }
 html:root .hero-home .wrap { padding-top:80px; padding-bottom:88px; }
 .news-date { display:block; font-size:12.5px; color:var(--qtd-text-soft); font-weight:600; margin-bottom:6px; }
 .news-grid .news-body h3 { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
-.ac-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:24px; }
-.ac-card { width:calc((100% - 48px) / 3); box-sizing:border-box; display:block; background:var(--qtd-white); border:1px solid var(--qtd-border); border-radius:var(--radius-lg); padding:32px 28px 30px; box-shadow:var(--shadow-sm); transition:transform .25s ease, box-shadow .25s ease; color:inherit; }
-.ac-icon { width:60px; height:60px; border-radius:50%; background:var(--qtd-green-light); color:var(--qtd-green-dark); display:flex; align-items:center; justify-content:center; margin-bottom:22px; transition:background .25s ease, color .25s ease; }
-.ac-icon svg { width:26px; height:26px; }
-.ac-card h3 { font-size:18px; margin:0; line-height:1.35; min-height:2.7em; }
-@media (hover:hover) and (pointer:fine) { .ac-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); } .ac-card:hover .ac-icon { background:var(--qtd-mint-grad); color:var(--qtd-on-mint); } }
-@media (max-width:1000px){ .ac-grid{ gap:18px; } .ac-card{ width:calc((100% - 36px) / 3); padding:26px 20px 24px; } .ac-card h3{ font-size:16.5px; } }
-@media (max-width:640px){ .ac-grid{ gap:12px; } .ac-card{ width:calc((100% - 12px) / 2); padding:20px 16px; } .ac-icon{ width:48px; height:48px; margin-bottom:14px; } .ac-icon svg{ width:22px; height:22px; } .ac-card h3{ font-size:14.5px; min-height:2.7em; } }
+.grad-text { background:var(--qtd-deep-grad); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.act-head { text-align:center; padding:48px 0 34px; background:radial-gradient(60% 90% at 50% 0%, #E3F7DD 0%, rgba(227,247,221,0) 70%); }
+.act-head h2 { font-size:clamp(32px, 5vw, 58px); font-weight:800; line-height:1.12; letter-spacing:-.01em; margin:0; color:#10261A; }
+.act-head p { max-width:560px; margin:14px auto 0; font-size:17px; }
+.act-band { background:radial-gradient(90% 120% at 15% 0%, #2DBF6A 0%, #1D8350 45%, #145A2C 100%); padding:60px 0 68px; }
+.act-band h3 { color:#fff; text-align:center; font-size:clamp(26px, 3.6vw, 42px); font-weight:800; line-height:1.15; margin:0 0 34px; }
+.act-glass { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:22px; }
+.act-gcard { display:flex; flex-direction:column; color:#fff; border-radius:28px; padding:10px; background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.45); box-shadow:0 0 36px rgba(174,230,164,.25); transition:transform .25s ease, background .25s ease; }
+.act-gcard:hover { transform:translateY(-4px); background:rgba(255,255,255,.18); }
+.act-gcard .ph { position:relative; }
+.act-gcard img { width:100%; aspect-ratio:16/10; object-fit:cover; object-position:50% 30%; border-radius:20px; display:block; }
+.act-gcard .no { position:absolute; top:12px; left:12px; width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,.92); color:var(--qtd-on-mint); font-weight:800; font-size:14px; display:flex; align-items:center; justify-content:center; }
+.act-gcard h4 { flex:1; color:#fff; font-size:18px; font-weight:700; line-height:1.4; margin:14px 12px 10px; display:flex; justify-content:space-between; gap:12px; align-items:flex-start; }
+.act-gcard h4 svg { flex:none; margin-top:4px; }
+.act-int { position:relative; padding:64px 0 70px; overflow:hidden; }
+.act-water { position:absolute; left:0; right:0; top:18px; text-align:center; font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(90px, 17vw, 240px); line-height:1; color:#EEF8EA; z-index:0; pointer-events:none; }
+.act-int h3 { position:relative; text-align:center; font-size:clamp(26px, 3.6vw, 42px); font-weight:800; line-height:1.15; margin:0 0 30px; color:#10261A; }
+.act-igrid { position:relative; display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:22px; max-width:960px; margin:0 auto; }
+.act-icard { position:relative; background:#fff; border-radius:28px; padding:10px 10px 26px; border:1.5px solid #CDEFC4; box-shadow:0 12px 30px rgba(27,99,9,.07); }
+.act-icard img { width:100%; aspect-ratio:16/9; object-fit:cover; object-position:50% 30%; border-radius:20px; display:block; }
+.act-icard b { display:block; margin:18px 22px 0; font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(44px, 5vw, 60px); line-height:1; }
+.act-icard span { display:block; margin:8px 22px 0; padding-right:48px; font-family:'Baloo 2',sans-serif; font-weight:700; font-size:20px; line-height:1.35; color:#10261A; }
+.act-icard i { position:absolute; right:20px; bottom:20px; width:40px; height:40px; border-radius:50%; background:var(--qtd-mint-grad); color:var(--qtd-on-mint); display:flex; align-items:center; justify-content:center; font-style:normal; font-weight:700; font-size:20px; }
+@media (max-width:1000px){ .act-glass{ grid-template-columns:repeat(2, minmax(0,1fr)); } }
+@media (max-width:600px){ .act-head{ padding:34px 0 24px; } .act-band{ padding:44px 0 50px; } .act-glass, .act-igrid{ grid-template-columns:minmax(0,1fr); } .act-int{ padding:46px 0 50px; } }
 .hero-gap { height:48px; }
 @media (max-width:600px){ .hero-gap{ height:28px; } }
 @media (max-width:900px){ html:root .hero-home{ min-height:520px; } html:root .hero-home .wrap{ padding:56px 20px 64px; } }
@@ -318,18 +335,34 @@ html:root .hero-home .wrap { padding-top:80px; padding-bottom:88px; }
   </div>
 </section>
 
-<section class="section" id="hoat-dong" style="background:var(--qtd-green-light);">
+<section class="act-head" id="hoat-dong">
   <div class="wrap">
-    <span class="qtd-eyebrow" style="display:block;text-align:center;width:fit-content;margin:0 auto 14px;">LĨNH VỰC HOẠT ĐỘNG</span>
-    <h2 style="text-align:center;">6 Lĩnh Vực Trọng Tâm</h2>
-    <p style="text-align:center;max-width:none;margin:0 auto 36px;">Với Quỹ Trí Đức, mỗi lĩnh vực là một hành trình gieo mầm hạnh phúc cho cộng đồng.</p>
-    <div class="ac-grid">
-      <a class="ac-card fade-in" href="pages/tintuc.html#giao-duc"><div class="ac-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8l10-4 10 4-10 4-10-4Z" stroke-linejoin="round"/><path d="M6 10.5V16c0 1.5 2.5 3 6 3s6-1.5 6-3v-5.5" /></svg></div><h3>Đồng hành cùng giáo dục</h3></a>
-      <a class="ac-card fade-in" href="pages/tintuc.html#nong-thon-moi"><div class="ac-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 16c2-3 6-5 10-5s8 2 10 5" stroke-linecap="round"/><path d="M5 16v4M9 13.6V20M15 13.6V20M19 16v4" stroke-linecap="round"/></svg></div><h3>Xây dựng nông thôn mới</h3></a>
-      <a class="ac-card fade-in" href="pages/tintuc.html#suc-khoe"><div class="ac-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-9.5-8.9A5 5 0 0 1 12 6a5 5 0 0 1 9.5 5.1C19 15.6 12 20 12 20Z" stroke-linejoin="round"/></svg></div><h3>Chăm sóc sức khỏe &amp; hỗ trợ cộng đồng</h3></a>
-      <a class="ac-card fade-in" href="pages/tintuc.html#thanh-nien"><div class="ac-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8.5" cy="8" r="3"/><circle cx="16" cy="9" r="2.5"/><path d="M2.5 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14.5 14.5c2.8.3 5 2.6 5 5.5" stroke-linecap="round"/></svg></div><h3>Đồng hành cùng thanh niên</h3></a>
-      <a class="ac-card fade-in" href="pages/tintuc.html#ton-giao"><div class="ac-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21c-4-3-4-7-4-9a4 4 0 0 1 4-4 4 4 0 0 1 4 4c0 2 0 6-4 9Z" stroke-linejoin="round"/><path d="M12 12c-3-1-5-3-5-6M12 12c3-1 5-3 5-6" stroke-linecap="round"/></svg></div><h3>Hoạt động tôn giáo</h3></a>
-      <a class="ac-card fade-in" href="pages/tintuc.html#dac-biet"><div class="ac-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 9c2-2 4-2 6 0s4 2 6 0 4-2 6 0" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Chia sẻ trong hoàn cảnh đặc biệt</h3></a>
+    <h2>Hoạt động của <span class="grad-text">Quỹ Trí Đức</span></h2>
+    <p>Bao gồm hoạt động cộng đồng và hoạt động nội bộ.</p>
+  </div>
+</section>
+
+<section class="act-band">
+  <div class="wrap">
+    <h3>Hoạt động cộng đồng</h3>
+    <div class="act-glass">
+      <a class="act-gcard fade-in" href="pages/tintuc.html#giao-duc"><div class="ph"><img src="images/hd-giao-duc-nha-ve-sinh.jpg" alt="" loading="lazy"><span class="no">1</span></div><h4><span>Hoạt động đồng hành cùng giáo dục</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h4></a>
+      <a class="act-gcard fade-in" href="pages/tintuc.html#suc-khoe"><div class="ph"><img src="images/hd-y-te-binh-oxy.jpg" alt="" loading="lazy"><span class="no">2</span></div><h4><span>Hoạt động đồng hành cùng y tế</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h4></a>
+      <a class="act-gcard fade-in" href="pages/tintuc.html#nong-thon-moi"><div class="ph"><img src="images/cau-tri-duc-8-khanh-thanh.jpg" alt="" loading="lazy"><span class="no">3</span></div><h4><span>Hoạt động xây dựng nông thôn mới</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h4></a>
+      <a class="act-gcard fade-in" href="pages/tintuc.html#thanh-nien"><div class="ph"><img src="images/hd-thanh-nien-mua-he-xanh.jpg" alt="" loading="lazy"><span class="no">4</span></div><h4><span>Hoạt động đồng hành cùng thanh niên</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h4></a>
+      <a class="act-gcard fade-in" href="pages/tintuc.html#ton-giao"><div class="ph"><img src="images/hd-ton-giao-chua-phat-buu.jpg" alt="" loading="lazy"><span class="no">5</span></div><h4><span>Hoạt động đồng hành cùng tôn giáo</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h4></a>
+      <a class="act-gcard fade-in" href="pages/tintuc.html#dac-biet"><div class="ph"><img src="images/hd-ho-tro-cong-dong-son-tra.jpg" alt="" loading="lazy"><span class="no">6</span></div><h4><span>Hoạt động hỗ trợ cộng đồng: chăm sóc sức khỏe, các hoàn cảnh khó khăn và các tình huống khẩn cấp</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h4></a>
+    </div>
+  </div>
+</section>
+
+<section class="act-int">
+  <div class="act-water" aria-hidden="true">NỘI BỘ</div>
+  <div class="wrap">
+    <h3>Hoạt động nội bộ</h3>
+    <div class="act-igrid">
+      <div class="act-icard fade-in"><img src="images/hd-noi-bo-tiec-tat-nien.jpg" alt="" loading="lazy"><b class="grad-text">01</b><span>Chăm lo đời sống CBNV Phát Tiến</span><i aria-hidden="true">+</i></div>
+      <div class="act-icard fade-in"><img src="images/hd-noi-bo-khuyen-hoc.jpg" alt="" loading="lazy"><b class="grad-text">02</b><span>Khuyến học – Tiếp sức con em CBNV đến trường</span><i aria-hidden="true">+</i></div>
     </div>
   </div>
 </section>

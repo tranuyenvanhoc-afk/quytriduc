@@ -254,8 +254,11 @@ html.boxed .qtd-footer { margin-top:28px; margin-bottom:20px; }
 
 .principle-card { text-align:left; }
 .principle-icon { width:48px; height:48px; border-radius:50%; background:var(--qtd-green-light); display:flex; align-items:center; justify-content:center; margin-bottom:14px; color:var(--qtd-green-dark); }
-.principle-card h3 { font-size:17px; margin:0 0 8px; }
-.principle-card p { font-size:14px; margin:0; }
+.principle-duo { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:22px; margin-top:28px; }
+.principle-duo .principle-card { padding:30px 32px; }
+.principle-card h3 { font-size:19px; margin:0 0 10px; }
+.principle-card p { font-size:15.5px; line-height:1.75; margin:0; text-align:justify; hyphens:auto; }
+@media (max-width:760px){ .principle-duo { grid-template-columns:minmax(0,1fr); } .principle-duo .principle-card { padding:24px 22px; } }
 
 .journey-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
 .journey-card { position:relative; border-radius:var(--radius-lg); overflow:hidden; min-height:300px; display:flex; align-items:flex-end; box-shadow:var(--shadow-sm); transition:box-shadow .25s ease; }
@@ -409,14 +412,10 @@ html.boxed .qtd-footer { margin-top:28px; margin-bottom:20px; }
 <section class="section">
   <div class="wrap">
     <span class="qtd-eyebrow" style="display:block;text-align:center;width:fit-content;margin:0 auto 14px;">GIÁ TRỊ THEO ĐUỔI</span>
-    <h2 style="text-align:center;">Những nguyên tắc dẫn lối hành trình</h2>
-    <div class="grid grid-3" style="margin-top:36px;">
-      <div class="card principle-card fade-in"><div class="principle-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M3 12h18" stroke-linecap="round"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Giá trị lâu dài</h3><p>Ưu tiên những chương trình tạo ra giá trị lâu dài và có khả năng hỗ trợ nhiều người.</p></div>
-      <div class="card principle-card fade-in"><div class="principle-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></div><h3>Nhu cầu thực tế</h3><p>Đáp ứng nhu cầu thực tế của cộng đồng, trao đi đúng mục đích và mang lại ý nghĩa thiết thực.</p></div>
-      <div class="card principle-card fade-in"><div class="principle-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8l10-4 10 4-10 4-10-4Z" stroke-linejoin="round"/><path d="M6 10.5V16c0 1.5 2.5 3 6 3s6-1.5 6-3v-5.5" /></svg></div><h3>Giáo dục</h3><p>Là lĩnh vực trọng tâm, đồng hành cùng thế hệ trẻ phát triển toàn diện.</p></div>
-      <div class="card principle-card fade-in"><div class="principle-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h4l2 6 4-14 2 8h6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Y tế</h3><p>Là lĩnh vực trọng tâm, bên cạnh các chương trình an sinh xã hội.</p></div>
-      <div class="card principle-card fade-in"><div class="principle-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8.5" cy="8" r="3"/><circle cx="16" cy="9" r="2.5"/><path d="M2.5 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14.5 14.5c2.8.3 5 2.6 5 5.5" stroke-linecap="round"/></svg></div><h3>Không phân biệt</h3><p>Không phân biệt tôn giáo, giới tính hay sắc tộc.</p></div>
-      <div class="card principle-card fade-in"><div class="principle-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Công tâm &amp; minh bạch</h3><p>Mọi hoạt động đều hướng đến tinh thần công tâm và minh bạch.</p></div>
+    <h2 style="text-align:center;">Về nguyên tắc hoạt động</h2>
+    <div class="principle-duo">
+      <div class="card principle-card fade-in"><div class="principle-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M3 12h18" stroke-linecap="round"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Ưu tiên giá trị lâu dài</h3><p>Quỹ ưu tiên những chương trình tạo ra giá trị lâu dài, có khả năng hỗ trợ nhiều người và đáp ứng nhu cầu thực tế của cộng đồng. Giáo dục và y tế là những lĩnh vực trọng tâm, bên cạnh các hoạt động phát triển địa phương và các chương trình an sinh xã hội, hỗ trợ người có hoàn cảnh khó khăn và kịp thời chung tay cùng cộng đồng trong những tình huống cấp thiết.</p></div>
+      <div class="card principle-card fade-in"><div class="principle-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Công tâm, minh bạch</h3><p>Mọi hoạt động đều hướng đến tinh thần công tâm, minh bạch, không phân biệt tôn giáo, giới tính hay sắc tộc; bảo đảm sự hỗ trợ được trao đi đúng mục đích và mang lại ý nghĩa thiết thực.</p></div>
     </div>
   </div>
 </section>
