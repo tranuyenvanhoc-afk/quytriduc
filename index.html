@@ -245,7 +245,8 @@ html:root .hero-home .wrap { padding-top:80px; padding-bottom:88px; }
 .act-water { position:absolute; left:0; right:0; top:18px; text-align:center; font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(90px, 17vw, 240px); line-height:1; color:#EEF8EA; z-index:0; pointer-events:none; }
 .act-int h3 { position:relative; text-align:center; font-size:clamp(26px, 3.6vw, 42px); font-weight:800; line-height:1.15; margin:0 0 30px; color:#10261A; }
 .act-igrid { position:relative; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:22px; }
-.act-icard { position:relative; background:#fff; border-radius:28px; padding:10px 10px 26px; border:1.5px solid #CDEFC4; box-shadow:0 12px 30px rgba(27,99,9,.07); }
+.act-icard { display:block; color:inherit; transition:transform .25s ease; position:relative; background:#fff; border-radius:28px; padding:10px 10px 26px; border:1.5px solid #CDEFC4; box-shadow:0 12px 30px rgba(27,99,9,.07); }
+.act-icard:hover { transform:translateY(-4px); }
 .act-icard img { width:100%; aspect-ratio:16/9; object-fit:cover; object-position:50% 30%; border-radius:20px; display:block; }
 .act-icard b { display:block; margin:18px 22px 0; font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(44px, 5vw, 60px); line-height:1; }
 .act-icard span { display:block; margin:8px 22px 0; padding-right:48px; font-family:'Baloo 2',sans-serif; font-weight:700; font-size:19px; line-height:1.35; color:#10261A; }
@@ -347,11 +348,11 @@ html:root .hero-home .wrap { padding-top:80px; padding-bottom:88px; }
     <h3>Hoạt động cộng đồng</h3>
     <div class="act-glass">
       <a class="act-gcard fade-in" href="pages/tintuc.html#giao-duc"><div class="ph"><img src="images/hd-giao-duc-nha-ve-sinh.jpg" alt="" loading="lazy"><span class="no">1</span></div><h4><span>Hoạt động đồng hành cùng giáo dục</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h4></a>
-      <a class="act-gcard fade-in" href="pages/tintuc.html#suc-khoe"><div class="ph"><img src="images/hd-y-te-binh-oxy.jpg" alt="" loading="lazy"><span class="no">2</span></div><h4><span>Hoạt động đồng hành cùng y tế</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h4></a>
+      <a class="act-gcard fade-in" href="pages/tintuc.html#y-te"><div class="ph"><img src="images/hd-y-te-binh-oxy.jpg" alt="" loading="lazy"><span class="no">2</span></div><h4><span>Hoạt động đồng hành cùng y tế</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h4></a>
       <a class="act-gcard fade-in" href="pages/tintuc.html#nong-thon-moi"><div class="ph"><img src="images/cau-tri-duc-8-khanh-thanh.jpg" alt="" loading="lazy"><span class="no">3</span></div><h4><span>Hoạt động xây dựng nông thôn mới</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h4></a>
       <a class="act-gcard fade-in" href="pages/tintuc.html#thanh-nien"><div class="ph"><img src="images/hd-thanh-nien-mua-he-xanh.jpg" alt="" loading="lazy"><span class="no">4</span></div><h4><span>Hoạt động đồng hành cùng thanh niên</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h4></a>
       <a class="act-gcard fade-in" href="pages/tintuc.html#ton-giao"><div class="ph"><img src="images/hd-ton-giao-chua-phat-buu.jpg" alt="" loading="lazy"><span class="no">5</span></div><h4><span>Hoạt động đồng hành cùng tôn giáo</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h4></a>
-      <a class="act-gcard fade-in" href="pages/tintuc.html#dac-biet"><div class="ph"><img src="images/hd-ho-tro-cong-dong-son-tra.jpg" alt="" loading="lazy"><span class="no">6</span></div><h4><span>Hoạt động hỗ trợ cộng đồng: chăm sóc sức khỏe, các hoàn cảnh khó khăn và các tình huống khẩn cấp</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h4></a>
+      <a class="act-gcard fade-in" href="pages/tintuc.html#ho-tro-cong-dong"><div class="ph"><img src="images/hd-ho-tro-cong-dong-son-tra.jpg" alt="" loading="lazy"><span class="no">6</span></div><h4><span>Hoạt động hỗ trợ cộng đồng: chăm sóc sức khỏe, các hoàn cảnh khó khăn và các tình huống khẩn cấp</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h4></a>
     </div>
   </div>
 </section>
@@ -361,9 +362,9 @@ html:root .hero-home .wrap { padding-top:80px; padding-bottom:88px; }
   <div class="wrap">
     <h3>Hoạt động nội bộ</h3>
     <div class="act-igrid">
-      <div class="act-icard fade-in"><img src="images/hd-noi-bo-tiec-tat-nien.jpg" alt="" loading="lazy"><b class="grad-text">01</b><span>Chăm lo đời sống CBNV Phát Tiến</span><i aria-hidden="true">+</i></div>
-      <div class="act-icard fade-in"><img src="images/hd-noi-bo-khuyen-hoc.jpg" alt="" loading="lazy"><b class="grad-text">02</b><span>Khuyến học – Tiếp sức con em CBNV đến trường</span><i aria-hidden="true">+</i></div>
-      <div class="act-icard fade-in"><img src="images/hd-noi-bo-tuong-than.jpg" alt="" loading="lazy"><b class="grad-text">03</b><span>Tương thân tương ái</span><i aria-hidden="true">+</i></div>
+      <a class="act-icard fade-in" href="pages/tintuc.html#cham-lo"><img src="images/hd-noi-bo-tiec-tat-nien.jpg" alt="" loading="lazy"><b class="grad-text">01</b><span>Chăm lo đời sống CBNV Phát Tiến</span><i aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+      <a class="act-icard fade-in" href="pages/tintuc.html#khuyen-hoc"><img src="images/hd-noi-bo-khuyen-hoc.jpg" alt="" loading="lazy"><b class="grad-text">02</b><span>Khuyến học – Tiếp sức con em CBNV đến trường</span><i aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+      <a class="act-icard fade-in" href="pages/tintuc.html#tuong-than"><img src="images/hd-noi-bo-tuong-than.jpg" alt="" loading="lazy"><b class="grad-text">03</b><span>Tương thân tương ái</span><i aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
     </div>
   </div>
 </section>
@@ -379,15 +380,15 @@ html:root .hero-home .wrap { padding-top:80px; padding-bottom:88px; }
       </a>
       <a class="news-card" href="pages/tin/khanh-thanh-cau-tri-duc-8-nhip-cau-ket-noi-yeu-thuong-chap-canh-uoc-mo.html">
         <div class="news-media"><img src="images/tin/1.jpg" alt="Khánh Thành Cầu Trí Đức 8 – Nhịp Cầu Kết Nối Yêu Thương, Chắp Cánh Ước Mơ" loading="lazy"></div>
-        <div class="news-body"><span class="news-date">01/07/2026</span><span class="tag tag">Xây dựng nông thôn mới</span><h3>Khánh Thành Cầu Trí Đức 8 – Nhịp Cầu Kết Nối Yêu Thương, Chắp Cánh Ước Mơ</h3></div>
+        <div class="news-body"><span class="news-date">01/07/2026</span><span class="tag tag">Nông thôn mới</span><h3>Khánh Thành Cầu Trí Đức 8 – Nhịp Cầu Kết Nối Yêu Thương, Chắp Cánh Ước Mơ</h3></div>
       </a>
       <a class="news-card" href="pages/tin/khoi-dong-sau-le-khoi-cong-xay-cau-tri-duc-8.html">
         <div class="news-media"><img src="images/tin/1.jpg" alt="Khởi Động Sau Lễ – Khởi Công Xây Cầu Trí Đức 8" loading="lazy"></div>
-        <div class="news-body"><span class="news-date">04/05/2026</span><span class="tag tag">Xây dựng nông thôn mới</span><h3>Khởi Động Sau Lễ – Khởi Công Xây Cầu Trí Đức 8</h3></div>
+        <div class="news-body"><span class="news-date">04/05/2026</span><span class="tag tag">Nông thôn mới</span><h3>Khởi Động Sau Lễ – Khởi Công Xây Cầu Trí Đức 8</h3></div>
       </a>
       <a class="news-card" href="pages/tin/qua-tet-binh-ngo-2026-loc-den-moi-nha.html">
         <div class="news-media"><img src="images/tin/1-3.jpg" alt="Quà Tết Bính Ngọ 2026 – LỘC ĐẾN MỌI NHÀ" loading="lazy"></div>
-        <div class="news-body"><span class="news-date">22/01/2026</span><span class="tag tag">Hỗ trợ cộng đồng</span><h3>Quà Tết Bính Ngọ 2026 – LỘC ĐẾN MỌI NHÀ</h3></div>
+        <div class="news-body"><span class="news-date">22/01/2026</span><span class="tag tag">Nội bộ · Chăm lo CBNV</span><h3>Quà Tết Bính Ngọ 2026 – LỘC ĐẾN MỌI NHÀ</h3></div>
       </a>
       <a class="news-card" href="pages/tin/tong-ket-hoat-dong-quy-tri-duc-nam-2025.html">
         <div class="news-media"><img src="images/tin/14.png" alt="Tổng Kết Hoạt Động Quỹ Trí Đức Năm 2025" loading="lazy"></div>
@@ -395,7 +396,7 @@ html:root .hero-home .wrap { padding-top:80px; padding-bottom:88px; }
       </a>
       <a class="news-card" href="pages/tin/tong-ket-hoat-dong-huong-ve-mien-trung-2025.html">
         <div class="news-media"><img src="images/tin/16-1.jpg" alt="Tổng Kết Hoạt Động Hướng Về Miền Trung 2025" loading="lazy"></div>
-        <div class="news-body"><span class="news-date">15/12/2025</span><span class="tag tag">Hoàn cảnh đặc biệt</span><h3>Tổng Kết Hoạt Động Hướng Về Miền Trung 2025</h3></div>
+        <div class="news-body"><span class="news-date">15/12/2025</span><span class="tag tag">Hỗ trợ cộng đồng</span><h3>Tổng Kết Hoạt Động Hướng Về Miền Trung 2025</h3></div>
       </a>
     </div>
     <div style="text-align:center;margin-top:34px;"><a href="pages/tintuc.html" class="btn btn-ghost">Xem thêm tin tức</a></div>
@@ -422,7 +423,7 @@ html:root .hero-home .wrap { padding-top:80px; padding-bottom:88px; }
       </div>
       <div class="footer-col">
         <h4>CÁC HOẠT ĐỘNG</h4>
-        <ul class="footer-links"><li><a href="pages/tintuc.html#giao-duc">Đồng hành cùng giáo dục</a></li><li><a href="pages/tintuc.html#nong-thon-moi">Xây dựng nông thôn mới</a></li><li><a href="pages/tintuc.html#suc-khoe">Sức khỏe &amp; hỗ trợ cộng đồng</a></li><li><a href="pages/tintuc.html#thanh-nien">Đồng hành cùng thanh niên</a></li><li><a href="pages/tintuc.html#ton-giao">Hoạt động tôn giáo</a></li><li><a href="pages/tintuc.html#dac-biet">Chia sẻ hoàn cảnh đặc biệt</a></li></ul>
+        <ul class="footer-links"><li><a href="pages/tintuc.html#giao-duc">Đồng hành cùng giáo dục</a></li><li><a href="pages/tintuc.html#y-te">Đồng hành cùng y tế</a></li><li><a href="pages/tintuc.html#nong-thon-moi">Xây dựng nông thôn mới</a></li><li><a href="pages/tintuc.html#thanh-nien">Đồng hành cùng thanh niên</a></li><li><a href="pages/tintuc.html#ton-giao">Đồng hành cùng tôn giáo</a></li><li><a href="pages/tintuc.html#ho-tro-cong-dong">Hỗ trợ cộng đồng</a></li><li><a href="pages/tintuc.html#cham-lo">Chăm lo đời sống CBNV</a></li><li><a href="pages/tintuc.html#khuyen-hoc">Khuyến học con em CBNV</a></li><li><a href="pages/tintuc.html#tuong-than">Tương thân tương ái</a></li></ul>
       </div>
       <div class="footer-col">
         <h4>LIÊN HỆ</h4>

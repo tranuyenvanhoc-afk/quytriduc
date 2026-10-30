@@ -250,12 +250,15 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
 .news-card.is-static:hover { transform:none !important; box-shadow:var(--shadow-sm) !important; }
 .news-card.is-static:hover .news-media img { transform:none !important; }.cat-btn:focus-visible { outline:2px solid var(--qtd-gold); outline-offset:2px; }
 .cat-btn.is-active { background:var(--qtd-mint-grad); color:var(--qtd-on-mint); }
+.cat-group { margin:10px 12px 2px; padding-top:10px; border-top:1px solid var(--qtd-border); font-size:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--qtd-green-dark); }
+.cat-group:first-of-type { margin-top:4px; }
 .cat-count { flex:none; font-size:12px; font-weight:700; background:var(--qtd-green-light); color:var(--qtd-green-dark); border-radius:999px; padding:2px 9px; }
 .cat-btn.is-active .cat-count { background:rgba(255,255,255,.22); color:#fff; }
 @media (max-width:1000px){
   .activity-layout { grid-template-columns:minmax(0,1fr); grid-template-areas:"aside" "main"; gap:24px; }
   .cat-panel { position:static; padding:10px; }
   .cat-list { flex-direction:row; overflow-x:auto; gap:8px; padding-bottom:4px; }
+  .cat-group { display:none; }
   .cat-btn { width:auto; flex:none; white-space:nowrap; border:1px solid var(--qtd-border); border-radius:999px; }
   .cat-btn.is-active { border-color:transparent; }
 }
@@ -291,7 +294,7 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
 
 <div class="wrap">
   <div class="activities-stat-card fade-in">
-    <div class="stat-item"><span class="ahs-num">6</span><span class="stat-label">Lĩnh vực hoạt động</span></div>
+    <div class="stat-item"><span class="ahs-num">9</span><span class="stat-label">Mảng hoạt động</span></div>
     <div class="stat-item"><span class="ahs-num">434</span><span class="stat-label">Dự án thực hiện</span></div>
     <div class="stat-item"><span class="ahs-num">57+ tỷ đồng</span><span class="stat-label">Tổng kinh phí</span></div>
   </div>
@@ -303,13 +306,20 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
       <aside class="cat-panel" aria-label="Lọc tin tức theo lĩnh vực">
         <div class="cat-list" id="cat-list">
         <button type="button" class="cat-btn is-active" data-cat="all" aria-pressed="true"><span>Tất cả tin tức</span><span class="cat-count">35</span></button>
-        <button type="button" class="cat-btn" data-cat="giao-duc" aria-pressed="false"><span>Đồng Hành Cùng Giáo Dục</span><span class="cat-count">6</span></button>
-        <button type="button" class="cat-btn" data-cat="nong-thon-moi" aria-pressed="false"><span>Xây Dựng Nông Thôn Mới</span><span class="cat-count">5</span></button>
-        <button type="button" class="cat-btn" data-cat="suc-khoe" aria-pressed="false"><span>Sức Khỏe & Hỗ Trợ Cộng Đồng</span><span class="cat-count">3</span></button>
-        <button type="button" class="cat-btn" data-cat="thanh-nien" aria-pressed="false"><span>Đồng Hành Cùng Thanh Niên</span><span class="cat-count">1</span></button>
-        <button type="button" class="cat-btn" data-cat="ton-giao" aria-pressed="false"><span>Hoạt Động Tôn Giáo</span><span class="cat-count">0</span></button>
-        <button type="button" class="cat-btn" data-cat="dac-biet" aria-pressed="false"><span>Hoàn Cảnh Đặc Biệt</span><span class="cat-count">2</span></button>
-        <button type="button" class="cat-btn" data-cat="khac" aria-pressed="false"><span>Tổng Kết & Hoạt Động Khác</span><span class="cat-count">18</span></button>
+        <div class="cat-group">Hoạt động cộng đồng</div>
+        <button type="button" class="cat-btn" data-cat="giao-duc" aria-pressed="false"><span>Đồng hành cùng giáo dục</span><span class="cat-count">5</span></button>
+        <button type="button" class="cat-btn" data-cat="y-te" aria-pressed="false"><span>Đồng hành cùng y tế</span><span class="cat-count">2</span></button>
+        <button type="button" class="cat-btn" data-cat="nong-thon-moi" aria-pressed="false"><span>Xây dựng nông thôn mới</span><span class="cat-count">5</span></button>
+        <button type="button" class="cat-btn" data-cat="thanh-nien" aria-pressed="false"><span>Đồng hành cùng thanh niên</span><span class="cat-count">0</span></button>
+        <button type="button" class="cat-btn" data-cat="ton-giao" aria-pressed="false"><span>Đồng hành cùng tôn giáo</span><span class="cat-count">1</span></button>
+        <button type="button" class="cat-btn" data-cat="ho-tro-cong-dong" aria-pressed="false"><span>Hỗ trợ cộng đồng</span><span class="cat-count">3</span></button>
+        <div class="cat-group">Hoạt động nội bộ</div>
+        <button type="button" class="cat-btn" data-cat="cham-lo" aria-pressed="false"><span>Chăm lo đời sống CBNV</span><span class="cat-count">5</span></button>
+        <button type="button" class="cat-btn" data-cat="khuyen-hoc" aria-pressed="false"><span>Khuyến học con em CBNV</span><span class="cat-count">2</span></button>
+        <button type="button" class="cat-btn" data-cat="tuong-than" aria-pressed="false"><span>Tương thân tương ái</span><span class="cat-count">4</span></button>
+        <div class="cat-group">Khác</div>
+        <button type="button" class="cat-btn" data-cat="tong-ket" aria-pressed="false"><span>Tổng kết hoạt động</span><span class="cat-count">5</span></button>
+        <button type="button" class="cat-btn" data-cat="khac" aria-pressed="false"><span>Thông tin khác</span><span class="cat-count">3</span></button>
         </div>
       </aside>
       <div class="activity-main">
@@ -318,7 +328,7 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
         <div class="news-media"><img src="../images/tin/780580718_1378272007785853_7523314009624858365_n.jpg" alt="Khánh Thành Công Trình Nhà Vệ Sinh Mới Tại Trường THCS Phan Công Hớn: Gửi Trọn Yêu Thương Vào Những Điều Nhỏ Nhất" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">24/08/2026</span>
-          <span class="tag tag-gold">Đồng Hành Cùng Giáo Dục</span>
+          <span class="tag tag-gold">Giáo dục</span>
           <h3>Khánh Thành Công Trình Nhà Vệ Sinh Mới Tại Trường THCS Phan Công Hớn: Gửi Trọn Yêu Thương Vào Những Điều Nhỏ Nhất</h3>
           <p class="news-excerpt">Mỗi ngày đến trường là một ngày vui, và niềm vui ấy đôi khi xuất bản những từ điều giản dị và thiết thực nhất. Trường THCS Phan Công Hớn là ngôi nhà chung học tập của…</p>
         </div>
@@ -327,7 +337,7 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
         <div class="news-media"><img src="../images/tin/1.jpg" alt="Khánh Thành Cầu Trí Đức 8 – Nhịp Cầu Kết Nối Yêu Thương, Chắp Cánh Ước Mơ" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">01/07/2026</span>
-          <span class="tag tag">Xây Dựng Nông Thôn Mới</span>
+          <span class="tag tag">Nông thôn mới</span>
           <h3>Khánh Thành Cầu Trí Đức 8 – Nhịp Cầu Kết Nối Yêu Thương, Chắp Cánh Ước Mơ</h3>
           <p class="news-excerpt">Ngày 01/07/2026, Quỹ Trí Đức phối hợp cùng địa phương tổ chức Lễ khánh thành Cầu Trí Đức 8 tại tỉnh Đồng Tháp (Tiền Giang cũ). Đây là công trình cầu giao thông thứ 13 do…</p>
         </div>
@@ -336,21 +346,21 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
         <div class="news-media"><img src="../images/tin/1.jpg" alt="Khởi Động Sau Lễ – Khởi Công Xây Cầu Trí Đức 8" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">04/05/2026</span>
-          <span class="tag tag">Xây Dựng Nông Thôn Mới</span>
+          <span class="tag tag">Nông thôn mới</span>
           <h3>Khởi Động Sau Lễ – Khởi Công Xây Cầu Trí Đức 8</h3>
           <p class="news-excerpt">Sau những ngày Lễ ấm áp, hành trình lan tỏa yêu thương lại tiếp tục được nối dài.</p>
         </div>
       </a>
-      <a class="news-card" data-cat="suc-khoe" href="tin/qua-tet-binh-ngo-2026-loc-den-moi-nha.html">
+      <a class="news-card" data-cat="cham-lo" href="tin/qua-tet-binh-ngo-2026-loc-den-moi-nha.html">
         <div class="news-media"><img src="../images/tin/1-3.jpg" alt="Quà Tết Bính Ngọ 2026 – LỘC ĐẾN MỌI NHÀ" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">22/01/2026</span>
-          <span class="tag tag">Sức Khỏe & Hỗ Trợ Cộng Đồng</span>
+          <span class="tag tag">Nội bộ · Chăm lo CBNV</span>
           <h3>Quà Tết Bính Ngọ 2026 – LỘC ĐẾN MỌI NHÀ</h3>
           <p class="news-excerpt">Có những món quà không chỉ để trao tay, mà còn để chạm đến trái tim. Khi năm cũ dần khép lại, điều đọng lại sâu sắc nhất với Quỹ Trí Đức chính là sự đồng hành, tin tưởng…</p>
         </div>
       </a>
-      <a class="news-card" data-cat="khac" href="tin/tong-ket-hoat-dong-quy-tri-duc-nam-2025.html">
+      <a class="news-card" data-cat="tong-ket" href="tin/tong-ket-hoat-dong-quy-tri-duc-nam-2025.html">
         <div class="news-media"><img src="../images/tin/14.png" alt="Tổng Kết Hoạt Động Quỹ Trí Đức Năm 2025" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">29/12/2025</span>
@@ -359,11 +369,11 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
           <p class="news-excerpt">Vậy là thêm một năm nữa khép lại. Quỹ Trí Đức xin trân trọng gửi lời tri ân sâu sắc đến các Mạnh Thường Quân, các Đơn vị và cá nhân đã lặng lẽ đồng hành – những tấm lòng…</p>
         </div>
       </a>
-      <a class="news-card" data-cat="dac-biet" href="tin/tong-ket-hoat-dong-huong-ve-mien-trung-2025.html">
+      <a class="news-card" data-cat="ho-tro-cong-dong" href="tin/tong-ket-hoat-dong-huong-ve-mien-trung-2025.html">
         <div class="news-media"><img src="../images/tin/16-1.jpg" alt="Tổng Kết Hoạt Động Hướng Về Miền Trung 2025" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">15/12/2025</span>
-          <span class="tag tag">Hoàn Cảnh Đặc Biệt</span>
+          <span class="tag tag">Hỗ trợ cộng đồng</span>
           <h3>Tổng Kết Hoạt Động Hướng Về Miền Trung 2025</h3>
           <p class="news-excerpt">Có lẽ, giữa người với người luôn tồn tại một sợi dây gắn kết rất đặc biệt. Để rồi khi nghe thấy Miền Trung bảo lũ, trong lòng lại dấy lên cảm giác xót xa, thương cảm khó…</p>
         </div>
@@ -372,7 +382,7 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
         <div class="news-media"><img src="../images/tin/1.jpg" alt="Cầu Trí Đức 6 – Nối Những Nhịp Bờ, Gửi Trọn Yêu Thương" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">14/12/2025</span>
-          <span class="tag tag">Xây Dựng Nông Thôn Mới</span>
+          <span class="tag tag">Nông thôn mới</span>
           <h3>Cầu Trí Đức 6 – Nối Những Nhịp Bờ, Gửi Trọn Yêu Thương</h3>
           <p class="news-excerpt">Sáng nay ngày 14/12/2025, giữa không khí hiền hòa của vùng quê Giao Long – nơi những rặng dừa xanh mướt, sum suê soi bóng xuống dòng sông Hàm Luông yên bình, Lễ khởi…</p>
         </div>
@@ -381,21 +391,21 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
         <div class="news-media"><img src="../images/tin/11.jpg" alt="Quỹ Trí Đức Đồng Hành Cùng “Chiếc Ô Tô Mơ Ước” 2025" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">19/11/2025</span>
-          <span class="tag tag-gold">Đồng Hành Cùng Giáo Dục</span>
+          <span class="tag tag-gold">Giáo dục</span>
           <h3>Quỹ Trí Đức Đồng Hành Cùng “Chiếc Ô Tô Mơ Ước” 2025</h3>
           <p class="news-excerpt">Như thường lệ hằng năm, Quỹ Trí Đức vinh dự đồng hành cùng các Đại lý Toyota – Phát Tiến Holding trong Chương trình Vẽ tranh “Chiếc ô tô mơ ước” – sân chơi nơi các Em…</p>
         </div>
       </a>
-      <a class="news-card" data-cat="thanh-nien" href="tin/chuc-mung-tan-sinh-vien-2025.html">
+      <a class="news-card" data-cat="khuyen-hoc" href="tin/chuc-mung-tan-sinh-vien-2025.html">
         <div class="news-media"><img src="../images/tin/1-1.jpg" alt="Chúc Mừng Tân Sinh Viên 2025" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">29/09/2025</span>
-          <span class="tag tag-gold">Đồng Hành Cùng Thanh Niên</span>
+          <span class="tag tag-gold">Nội bộ · Khuyến học</span>
           <h3>Chúc Mừng Tân Sinh Viên 2025</h3>
           <p class="news-excerpt">Điểm mới trong hoạt động năm nay là Chủ tịch Quỹ Trí Đức đã đến trực tiếp các Cửa hàng/Đơn vị để gặp gỡ Tân Sinh viên và Ba/ Mẹ. Thật trân quý khi các Em có thể sắp xếp…</p>
         </div>
       </a>
-      <a class="news-card" data-cat="khac" href="tin/thu-gon-pin-song-binh-yen.html">
+      <a class="news-card" data-cat="ho-tro-cong-dong" href="tin/thu-gon-pin-song-binh-yen.html">
         <div class="news-media"><img src="../images/tin/z6950589620330_ac4509977018e235033e7a77f7d7161d.jpg" alt="Thu Gon Pin – Sống Bình Yên" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">29/08/2025</span>
@@ -404,34 +414,34 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
           <p class="news-excerpt">Từ tháng 10/2022, Quỹ Trí Đức đã đồng hành cùng các Đại lý/ Cửa hàng trong hoạt động THU GOM PIN CŨ – góp phần giảm thiểu rác thải độc hại và bảo vệ môi trường sống.…</p>
         </div>
       </a>
-      <a class="news-card" data-cat="giao-duc" href="tin/gui-yeu-thuong-trong-tung-trang-giay-trang.html">
+      <a class="news-card" data-cat="khuyen-hoc" href="tin/gui-yeu-thuong-trong-tung-trang-giay-trang.html">
         <div class="news-media"><img src="../images/tin/z6953534456036_27432fb2ca9d6953af16d365e9270687.jpg" alt="Gửi Yêu Thương Trong Từng Trang Giấy Trắng" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">28/08/2025</span>
-          <span class="tag tag">Đồng Hành Cùng Giáo Dục</span>
+          <span class="tag tag">Nội bộ · Khuyến học</span>
           <h3>Gửi Yêu Thương Trong Từng Trang Giấy Trắng</h3>
           <p class="news-excerpt">Các Ba Mẹ và các Con yêu thương của Đại gia đình Phát Tiến Holding,</p>
         </div>
       </a>
-      <a class="news-card" data-cat="khac" href="tin/quoc-te-thieu-nhi-01-06-noi-yeu-thuong-luon-dong-day.html">
+      <a class="news-card" data-cat="tuong-than" href="tin/quoc-te-thieu-nhi-01-06-noi-yeu-thuong-luon-dong-day.html">
         <div class="news-media"><img src="../images/stat-banner-hands.jpg" alt="Quốc Tế Thiếu Nhi 01/06 – Nơi Yêu Thương Luôn Đong Đầy" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">06/06/2025</span>
-          <span class="tag tag-gold">Giáo dục</span>
+          <span class="tag tag-gold">Nội bộ · Tương thân tương ái</span>
           <h3>Quốc Tế Thiếu Nhi 01/06 – Nơi Yêu Thương Luôn Đong Đầy</h3>
           <p class="news-excerpt">Nhân dịp Quốc tế Thiếu Nhi 01/06 vừa qua, Phát Tiến Holding phối hợp cùng Quỹ Trí Đức đã tổ chức một chương trình thật ấm áp và đầy ý nghĩa dành tặng cho các bé.</p>
         </div>
       </a>
-      <a class="news-card" data-cat="khac" href="tin/dep-la-duoc-yeu-chinh-minh.html">
+      <a class="news-card" data-cat="cham-lo" href="tin/dep-la-duoc-yeu-chinh-minh.html">
         <div class="news-media"><img src="../images/tin/1-1.jpg" alt="“Đẹp Là Được Yêu Chính Mình”" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">19/05/2025</span>
-          <span class="tag tag">Hoạt động</span>
+          <span class="tag tag">Nội bộ · Chăm lo CBNV</span>
           <h3>“Đẹp Là Được Yêu Chính Mình”</h3>
           <p class="news-excerpt">Ngày 17/05/2025, Quỹ Từ Thiện Xã Hội Trí Đức đã phối hợp cùng Honda Ô tô Biên Hòa tổ chức thành công Workshop Makeup Cá Nhân – một không gian nhỏ đầy ắp tình yêu thương…</p>
         </div>
       </a>
-      <a class="news-card" data-cat="khac" href="tin/tong-ket-hoat-dong-quy-tri-duc-quy-i-2025.html">
+      <a class="news-card" data-cat="tong-ket" href="tin/tong-ket-hoat-dong-quy-tri-duc-quy-i-2025.html">
         <div class="news-media"><img src="../images/stat-banner-hands.jpg" alt="Tổng Kết Hoạt Động Quỹ Trí Đức Quý I/2025" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">19/04/2025</span>
@@ -440,16 +450,16 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
           <p class="news-excerpt">Quý I/2025 khép lại với thật nhiều cảm xúc</p>
         </div>
       </a>
-      <a class="news-card" data-cat="khac" href="tin/workshop-makeup-ca-nhan-danh-cho-nhan-vien-nu-tuyen-dau-lan-toa-yeu-thuong-tu-ben-trong.html">
+      <a class="news-card" data-cat="cham-lo" href="tin/workshop-makeup-ca-nhan-danh-cho-nhan-vien-nu-tuyen-dau-lan-toa-yeu-thuong-tu-ben-trong.html">
         <div class="news-media"><img src="../images/tin/batch_z6483516978659_7f947317c13f56eafb35271d1bb8c939.jpg" alt="Workshop Makeup Cá Nhân – Dành Cho Nhân Viên Nữ Tuyến Đầu Lan Tỏa Yêu Thương Từ Bên Trong" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">08/04/2025</span>
-          <span class="tag tag">Hoạt động</span>
+          <span class="tag tag">Nội bộ · Chăm lo CBNV</span>
           <h3>Workshop Makeup Cá Nhân – Dành Cho Nhân Viên Nữ Tuyến Đầu Lan Tỏa Yêu Thương Từ Bên Trong</h3>
           <p class="news-excerpt">Ngày 5/4/2025, Trong không khí ấm áp và đầy năng lượng tích cực, Workshop Makeup Cá Nhân do Quỹ Từ Thiện Xã Hội Trí Đức tổ chức cho các nhân viên nữ tuyến đầu của Toyota…</p>
         </div>
       </a>
-      <a class="news-card" data-cat="khac" href="tin/tong-ket-7-nam-hoat-dong-quy-tu-thien-xa-hoi-tri-duc-29-01-2018-31-12-2024.html">
+      <a class="news-card" data-cat="tong-ket" href="tin/tong-ket-7-nam-hoat-dong-quy-tu-thien-xa-hoi-tri-duc-29-01-2018-31-12-2024.html">
         <div class="news-media"><img src="../images/tin/anh-bia.jpg" alt="Tổng Kết 7 Năm Hoạt Động Quỹ Từ Thiện Xã Hội Trí Đức 29/01/2018 – 31/12/2024" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">10/02/2025</span>
@@ -458,7 +468,7 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
           <p class="news-excerpt">7 năm – không chỉ là hành trình của Quỹ Trí Đức mà còn là hành trình của tình yêu thương, của những tấm lòng luôn hướng về cộng đồng.</p>
         </div>
       </a>
-      <a class="news-card" data-cat="khac" href="tin/quy-tri-duc-tong-ket-hoat-dong-nam-2024.html">
+      <a class="news-card" data-cat="tong-ket" href="tin/quy-tri-duc-tong-ket-hoat-dong-nam-2024.html">
         <div class="news-media"><img src="../images/tin/bia.png" alt="Quỹ Trí Đức Tổng Kết Hoạt Động Năm 2024" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">09/01/2025</span>
@@ -471,16 +481,16 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
         <div class="news-media"><img src="../images/tin/batch_2.jpg" alt="Quỹ Trí Đức Đồng Hành Cùng Cuộc Thi Vẽ Tranh Chiếc Ô Tô Mơ Ước 2024" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">14/11/2024</span>
-          <span class="tag tag-gold">Đồng Hành Cùng Giáo Dục</span>
+          <span class="tag tag-gold">Giáo dục</span>
           <h3>Quỹ Trí Đức Đồng Hành Cùng Cuộc Thi Vẽ Tranh Chiếc Ô Tô Mơ Ước 2024</h3>
           <p class="news-excerpt">Với thời đại công nghệ, chỉ cần 1 cú nhấp chuột là có thể tạo thành 1 bức tranh. Nhưng so với việc được chứng kiến việc hoàn thiện 1 bức vẽ từ lúc phát thảo đến khi hoàn…</p>
         </div>
       </a>
-      <a class="news-card" data-cat="khac" href="tin/mot-ngay-den-voi-tzuchi-dai-bac-hanh-trinh-day-y-nghia.html">
+      <a class="news-card" data-cat="ton-giao" href="tin/mot-ngay-den-voi-tzuchi-dai-bac-hanh-trinh-day-y-nghia.html">
         <div class="news-media"><img src="../images/tin/2.jpg" alt="Một Ngày Đến Với Tzuchi Đài Bắc – Hành Trình Đầy Ý Nghĩa" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">28/09/2024</span>
-          <span class="tag tag">Hoạt động</span>
+          <span class="tag tag">Tôn giáo</span>
           <h3>Một Ngày Đến Với Tzuchi Đài Bắc – Hành Trình Đầy Ý Nghĩa</h3>
           <p class="news-excerpt">Trong Tháng 09/2024, Quỹ Từ Thiện Xã Hội Trí Đức đã có 1 chuyến đi đong đầy tình thương, học hỏi rất nhiều điều hay và ý nghĩa từ các thành viên thuộc Hội từ thiện Phật…</p>
         </div>
@@ -489,7 +499,7 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
         <div class="news-media"><img src="../images/tin/455793081_821112396835153_1121239290559999680_n-1.jpg" alt="Tặng Vở Trí Đức Chào Năm Học Mới 2024-2025" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">16/08/2024</span>
-          <span class="tag tag-gold">Đồng Hành Cùng Giáo Dục</span>
+          <span class="tag tag-gold">Giáo dục</span>
           <h3>Tặng Vở Trí Đức Chào Năm Học Mới 2024-2025</h3>
           <p class="news-excerpt">“Một năm khỏi đầu từ mùa xuân, một đời khởi đầu từ tuổi trẻ. Tuổi trẻ là mùa xuân của xã hội.”</p>
         </div>
@@ -498,7 +508,7 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
         <div class="news-media"><img src="../images/tin/1.jpg" alt="Quỹ Trí Đức Đồng Hành Xây Những Tuyến Đường Yêu Thương Tại Bến Tre" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">29/07/2024</span>
-          <span class="tag tag">Xây Dựng Nông Thôn Mới</span>
+          <span class="tag tag">Nông thôn mới</span>
           <h3>Quỹ Trí Đức Đồng Hành Xây Những Tuyến Đường Yêu Thương Tại Bến Tre</h3>
           <p class="news-excerpt">Giồng Trôm xanh ngát những hàng dừa</p>
         </div>
@@ -507,7 +517,7 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
         <div class="news-media"><img src="../images/tin/DANH-SACH-QUYEN-GOP_page-0001.jpg" alt="Cập Nhật Danh Sách Quyên Góp Vào Tài Khoản Quỹ Trí Đức (Từ Ngày 03/05/2024 Đến Ngày 02/06/2024)" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">05/06/2024</span>
-          <span class="tag tag">Hỗ trợ cộng đồng</span>
+          <span class="tag tag">Thông tin khác</span>
           <h3>Cập Nhật Danh Sách Quyên Góp Vào Tài Khoản Quỹ Trí Đức (Từ Ngày 03/05/2024 Đến Ngày 02/06/2024)</h3>
           <p class="news-excerpt">Lời nói cảm ơn chắc chắn không diễn tả hết sự cảm kích của Quỹ Trí Đức dành cho các Anh/Chị/Em mạnh thường quân đã quan tâm, đồng hành cùng Quỹ suốt thời gian qua, Quỹ…</p>
         </div>
@@ -516,52 +526,52 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
         <div class="news-media"><img src="../images/tin/z5385728075762_609f2c3ce3c8927ff7baeabadc6aae9f.jpg" alt="Quỹ Trí Đức Chúc Mừng Huyện Giồng Trôm Đón Nhận Bằng Xếp Hạng Cấp Tỉnh" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">26/04/2024</span>
-          <span class="tag tag">Xây Dựng Nông Thôn Mới</span>
+          <span class="tag tag">Nông thôn mới</span>
           <h3>Quỹ Trí Đức Chúc Mừng Huyện Giồng Trôm Đón Nhận Bằng Xếp Hạng Cấp Tỉnh</h3>
           <p class="news-excerpt">Sáng nay ngày 26/04/2024, đại diện Quỹ Trí Đức – Toyota Bến Tre đã đến dự Lễ chúc mừng Huyện Giồng Trôm đón nhận Bằng xếp hạng Di tích lịch sử văn hóa cấp Tỉnh: Sự kiện…</p>
         </div>
       </a>
-      <a class="news-card" data-cat="khac" href="tin/cuoc-thi-noi-bo-vui-tet-sum-vay-tron-day-huong-vi.html">
+      <a class="news-card" data-cat="cham-lo" href="tin/cuoc-thi-noi-bo-vui-tet-sum-vay-tron-day-huong-vi.html">
         <div class="news-media"><img src="../images/tin/poster-2.jpg" alt="Cuộc thi ảnh nội bộ VUI TẾT SUM VẦY – TRÒN ĐẦY HƯƠNG VỊ" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">02/02/2024</span>
-          <span class="tag tag">Hoạt động</span>
+          <span class="tag tag">Nội bộ · Chăm lo CBNV</span>
           <h3>Cuộc thi ảnh nội bộ VUI TẾT SUM VẦY – TRÒN ĐẦY HƯƠNG VỊ</h3>
           <p class="news-excerpt">Trong quá trình trao Quà Tết 2024 đến với các Đại lý/ Cửa hàng/ Đơn vị, Ban Lãnh đạo PTC Holding – Quỹ Trí Đức thật vui khi món quà được Nhân viên đón nhận bằng một thái…</p>
         </div>
       </a>
-      <a class="news-card" data-cat="suc-khoe" href="tin/thieu-lam-nung-xi-du-an-cham-lo-suc-khoe-cho-nhan-vien-noi-bo.html">
+      <a class="news-card" data-cat="cham-lo" href="tin/thieu-lam-nung-xi-du-an-cham-lo-suc-khoe-cho-nhan-vien-noi-bo.html">
         <div class="news-media"><img src="../images/tin/z3743931497498_1d39b9c8c33df12653dea2f0ed1c1535.jpg" alt="Thiếu Lâm Nững Xị – Dự Án Chăm Lo Sức Khỏe Cho Nhân Viên Nội Bộ" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">29/09/2022</span>
-          <span class="tag tag">Sức Khỏe & Hỗ Trợ Cộng Đồng</span>
+          <span class="tag tag">Nội bộ · Chăm lo CBNV</span>
           <h3>Thiếu Lâm Nững Xị – Dự Án Chăm Lo Sức Khỏe Cho Nhân Viên Nội Bộ</h3>
           <p class="news-excerpt">Qua nhiều cơ duyên, Anh Chị Chủ tịch Quỹ Trí Đức đã được biết đến Bộ môn THIẾU LÂM NỮNG XỊ bắc phái, môn võ lợi hại chính gốc của người Tiều. “Nững xị” (hay “bế xị”)…</p>
         </div>
       </a>
-      <a class="news-card" data-cat="khac" href="tin/trao-thuong-cuoc-thi-buc-anh-be-yeu-van-dieu-muon-noi.html">
+      <a class="news-card" data-cat="tuong-than" href="tin/trao-thuong-cuoc-thi-buc-anh-be-yeu-van-dieu-muon-noi.html">
         <div class="news-media"><img src="../images/tin/CAC-BE1-1-1.jpeg" alt="Trao Thưởng Cuộc Thi “Bức Ảnh Bé Yêu – Vạn Điều Muốn Nói”" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">03/06/2022</span>
-          <span class="tag tag-gold">Giáo dục</span>
+          <span class="tag tag-gold">Nội bộ · Tương thân tương ái</span>
           <h3>Trao Thưởng Cuộc Thi “Bức Ảnh Bé Yêu – Vạn Điều Muốn Nói”</h3>
           <p class="news-excerpt">Khi những cánh phượng đỏ rực sân trường, tiếng ve kêu rộn rã báo hiệu mùa hè đã đến. Tháng 6 lại về trong niềm hân hoan đón chào một ngày mới, một ngày Tết thật đặc biệt…</p>
         </div>
       </a>
-      <a class="news-card" data-cat="khac" href="tin/cong-bo-ket-qua-cuoc-thi-buc-anh-be-yeu-van-dieu-muon-noi.html">
+      <a class="news-card" data-cat="tuong-than" href="tin/cong-bo-ket-qua-cuoc-thi-buc-anh-be-yeu-van-dieu-muon-noi.html">
         <div class="news-media"><img src="../images/tin/z3437572833216_44624a0c6f380797174449b6af03aef3-scaled.jpg" alt="Công Bố Kết Quả Cuộc Thi “Bức Ảnh Bé Yêu – Vạn Điều Muốn Nói”" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">01/06/2022</span>
-          <span class="tag tag-gold">Giáo dục</span>
+          <span class="tag tag-gold">Nội bộ · Tương thân tương ái</span>
           <h3>Công Bố Kết Quả Cuộc Thi “Bức Ảnh Bé Yêu – Vạn Điều Muốn Nói”</h3>
           <p class="news-excerpt">Cuộc thi có quá nhiều sự thành công vượt hơn mong đợi, BTC đã tiếp nhận gần 150 bức ảnh dự thi từ các Đơn vị và bức nào cũng dễ thương, đáng yêu, mang những màu sắc…</p>
         </div>
       </a>
-      <a class="news-card" data-cat="khac" href="tin/buc-anh-be-yeu-van-dieu-muon-noi.html">
+      <a class="news-card" data-cat="tuong-than" href="tin/buc-anh-be-yeu-van-dieu-muon-noi.html">
         <div class="news-media"><img src="../images/tin/z3403486342554_2779fec29370d851f26f3fb7e18641c1-scaled.jpg" alt="Bức Ảnh Bé Yêu – Vạn Điều Muốn Nói" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">10/05/2022</span>
-          <span class="tag tag-gold">Giáo dục</span>
+          <span class="tag tag-gold">Nội bộ · Tương thân tương ái</span>
           <h3>Bức Ảnh Bé Yêu – Vạn Điều Muốn Nói</h3>
           <p class="news-excerpt">Vậy là đã gần 01 năm kể từ ngày các Bé của Đại gia đình Phát Tiến tham gia “30 NGÀY THỰC HÀNH LÒNG BIẾT ƠN & LÒNG YÊU THƯƠNG” do Quỹ Trí Đức tổ chức vào tháng…</p>
         </div>
@@ -570,21 +580,21 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
         <div class="news-media"><img src="../images/tin/1.jpg" alt="Kỷ Niệm Một Chuyến Đi…" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">30/04/2022</span>
-          <span class="tag tag">Hoạt động</span>
+          <span class="tag tag">Thông tin khác</span>
           <h3>Kỷ Niệm Một Chuyến Đi…</h3>
           <p class="news-excerpt">Mùa Lễ cũng đã về, ai ai cũng khoe những hình ảnh du lịch cùng bạn bè/ gia đình nên Quỹ Trí Đức cũng xin phép “khoe” về “Kỷ niệm một chuyến đi”…</p>
         </div>
       </a>
-      <a class="news-card" data-cat="dac-biet" href="tin/thong-bao-ngung-ho-tro-cham-soc-f0-tai-nha.html">
+      <a class="news-card" data-cat="y-te" href="tin/thong-bao-ngung-ho-tro-cham-soc-f0-tai-nha.html">
         <div class="news-media"><img src="../images/tin/z3334613355891_be40ce36c976c56d3559f374292fe98b-scaled.jpg" alt="Thông Báo Ngưng Hỗ Trợ Chăm Sóc F0 Tại Nhà" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">12/04/2022</span>
-          <span class="tag tag">Hoàn Cảnh Đặc Biệt</span>
+          <span class="tag tag">Y tế</span>
           <h3>Thông Báo Ngưng Hỗ Trợ Chăm Sóc F0 Tại Nhà</h3>
           <p class="news-excerpt">“Bình minh cũng đã trở lại”, các Bác sĩ phải trở về với những công việc riêng của mình; các bạn Tình nguyện viên cũng cần có thời gian tập trung công việc chuyên môn và…</p>
         </div>
       </a>
-      <a class="news-card" data-cat="khac" href="tin/nhin-lai-mot-nam-hanh-trinh-thien-nguyen-cua-quy-tu-thien-xa-hoi-phat-tien.html">
+      <a class="news-card" data-cat="tong-ket" href="tin/nhin-lai-mot-nam-hanh-trinh-thien-nguyen-cua-quy-tu-thien-xa-hoi-phat-tien.html">
         <div class="news-media"><img src="../images/tin/50019043_2097933576964217_3627780732572663808_n.jpg" alt="Nhìn lại một năm hành trình thiện nguyện của Quỹ từ thiện xã hội Phát Tiến" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">24/07/2021</span>
@@ -597,16 +607,16 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
         <div class="news-media"><img src="../images/tin/165274334_3897185353705688_5529255366177334775_n.jpg" alt="Quỹ Trí Đức nhận bằng khen từ Hội khuyến học xã Bình Lãng" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">01/04/2021</span>
-          <span class="tag tag-gold">Đồng Hành Cùng Giáo Dục</span>
+          <span class="tag tag-gold">Giáo dục</span>
           <h3>Quỹ Trí Đức nhận bằng khen từ Hội khuyến học xã Bình Lãng</h3>
           <p class="news-excerpt">Ghi nhận những đóng góp của Quỹ Trí Đức trong công tác khuyến học của địa phương ngày 31/3/2021 vừa qua, tại Đại hội Đại biểu Hội khuyến học xã Bình Lãng lần thứ IV…</p>
         </div>
       </a>
-      <a class="news-card" data-cat="suc-khoe" href="tin/goi-banh-tet-toa-yeu-thuong.html">
+      <a class="news-card" data-cat="ho-tro-cong-dong" href="tin/goi-banh-tet-toa-yeu-thuong.html">
         <div class="news-media"><img src="../images/tin/tet13-1.jpg" alt="Gói Bánh Tết – Toả Yêu Thương" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">31/01/2021</span>
-          <span class="tag tag">Sức Khỏe & Hỗ Trợ Cộng Đồng</span>
+          <span class="tag tag">Hỗ trợ cộng đồng</span>
           <h3>Gói Bánh Tết – Toả Yêu Thương</h3>
           <p class="news-excerpt">Nằm trong chuỗi hoạt động mừng Tết Nguyên Đán của Quỹ Trí Đức – chương trình GÓI BÁNH TẾT, TOẢ YÊU THƯƠNG đã được khởi động tại Tiền Giang sáng ngày 31/01/2021.</p>
         </div>
@@ -615,16 +625,16 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
         <div class="news-media"><img src="../images/tin/140010298_3709970759093816_1468345969241782800_n.jpg" alt="Họp Mặt Ban Biên Tập Quỹ Trí Đức" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">21/01/2021</span>
-          <span class="tag tag">Hoạt động</span>
+          <span class="tag tag">Thông tin khác</span>
           <h3>Họp Mặt Ban Biên Tập Quỹ Trí Đức</h3>
           <p class="news-excerpt">Ngày 21/01/2021 vừa qua, Ban biên tập quỹ Trí Đức đã có buổi họp mặt tại Tiền Giang. Đây chính là buổi ra mắt chính thức của các thành viên phụ trách hoạt động Quỹ tại…</p>
         </div>
       </a>
-      <a class="news-card" data-cat="khac" href="tin/ngay-hoi-hien-mau-toyota-tien-giang.html">
+      <a class="news-card" data-cat="y-te" href="tin/ngay-hoi-hien-mau-toyota-tien-giang.html">
         <div class="news-media"><img src="../images/tin/139627897_3700161773408048_2806862208585197879_n.jpg" alt="Ngày Hội Hiến Máu Toyota Tiền Giang" loading="lazy"></div>
         <div class="news-body">
           <span class="news-date">20/01/2021</span>
-          <span class="tag tag">Hoạt động</span>
+          <span class="tag tag">Y tế</span>
           <h3>Ngày Hội Hiến Máu Toyota Tiền Giang</h3>
           <p class="news-excerpt">Mừng kỉ niệm 03 năm thành lập, Quỹ từ thiện xã hội Trí Đức đã phát động rất nhiều hoạt động mang lại giá trị hữu ích cho cộng đồng.</p>
         </div>
@@ -646,7 +656,7 @@ html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; 
       </div>
       <div class="footer-col">
         <h4>CÁC HOẠT ĐỘNG</h4>
-        <ul class="footer-links"><li><a href="../pages/tintuc.html#giao-duc">Đồng hành cùng giáo dục</a></li><li><a href="../pages/tintuc.html#nong-thon-moi">Xây dựng nông thôn mới</a></li><li><a href="../pages/tintuc.html#suc-khoe">Sức khỏe &amp; hỗ trợ cộng đồng</a></li><li><a href="../pages/tintuc.html#thanh-nien">Đồng hành cùng thanh niên</a></li><li><a href="../pages/tintuc.html#ton-giao">Hoạt động tôn giáo</a></li><li><a href="../pages/tintuc.html#dac-biet">Chia sẻ hoàn cảnh đặc biệt</a></li></ul>
+        <ul class="footer-links"><li><a href="../pages/tintuc.html#giao-duc">Đồng hành cùng giáo dục</a></li><li><a href="../pages/tintuc.html#y-te">Đồng hành cùng y tế</a></li><li><a href="../pages/tintuc.html#nong-thon-moi">Xây dựng nông thôn mới</a></li><li><a href="../pages/tintuc.html#thanh-nien">Đồng hành cùng thanh niên</a></li><li><a href="../pages/tintuc.html#ton-giao">Đồng hành cùng tôn giáo</a></li><li><a href="../pages/tintuc.html#ho-tro-cong-dong">Hỗ trợ cộng đồng</a></li><li><a href="../pages/tintuc.html#cham-lo">Chăm lo đời sống CBNV</a></li><li><a href="../pages/tintuc.html#khuyen-hoc">Khuyến học con em CBNV</a></li><li><a href="../pages/tintuc.html#tuong-than">Tương thân tương ái</a></li></ul>
       </div>
       <div class="footer-col">
         <h4>LIÊN HỆ</h4>
@@ -779,8 +789,10 @@ catBtns.forEach(btn => {
     renderList();
   });
 });
+const ALIAS = { 'suc-khoe':'y-te', 'dac-biet':'ho-tro-cong-dong' };
 function applyHash(){
-  const key = decodeURIComponent(location.hash.replace('#', ''));
+  let key = decodeURIComponent(location.hash.replace('#', ''));
+  if (!document.querySelector('.cat-btn[data-cat="' + key + '"]') && ALIAS[key]) key = ALIAS[key];
   const btn = catBtns.find(b => b.dataset.cat === key);
   if (btn) btn.click();
 }
