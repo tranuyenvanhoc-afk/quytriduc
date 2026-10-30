@@ -244,13 +244,13 @@ html:root .hero-home .wrap { padding-top:80px; padding-bottom:88px; }
 .act-int { position:relative; padding:64px 0 70px; overflow:hidden; }
 .act-water { position:absolute; left:0; right:0; top:18px; text-align:center; font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(90px, 17vw, 240px); line-height:1; color:#EEF8EA; z-index:0; pointer-events:none; }
 .act-int h3 { position:relative; text-align:center; font-size:clamp(26px, 3.6vw, 42px); font-weight:800; line-height:1.15; margin:0 0 30px; color:#10261A; }
-.act-igrid { position:relative; display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:22px; max-width:960px; margin:0 auto; }
+.act-igrid { position:relative; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:22px; }
 .act-icard { position:relative; background:#fff; border-radius:28px; padding:10px 10px 26px; border:1.5px solid #CDEFC4; box-shadow:0 12px 30px rgba(27,99,9,.07); }
 .act-icard img { width:100%; aspect-ratio:16/9; object-fit:cover; object-position:50% 30%; border-radius:20px; display:block; }
 .act-icard b { display:block; margin:18px 22px 0; font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(44px, 5vw, 60px); line-height:1; }
-.act-icard span { display:block; margin:8px 22px 0; padding-right:48px; font-family:'Baloo 2',sans-serif; font-weight:700; font-size:20px; line-height:1.35; color:#10261A; }
+.act-icard span { display:block; margin:8px 22px 0; padding-right:48px; font-family:'Baloo 2',sans-serif; font-weight:700; font-size:19px; line-height:1.35; color:#10261A; }
 .act-icard i { position:absolute; right:20px; bottom:20px; width:40px; height:40px; border-radius:50%; background:var(--qtd-mint-grad); color:var(--qtd-on-mint); display:flex; align-items:center; justify-content:center; font-style:normal; font-weight:700; font-size:20px; }
-@media (max-width:1000px){ .act-glass{ grid-template-columns:repeat(2, minmax(0,1fr)); } }
+@media (max-width:1000px){ .act-glass{ grid-template-columns:repeat(2, minmax(0,1fr)); } .act-igrid{ grid-template-columns:repeat(2, minmax(0,1fr)); } .act-igrid .act-icard:last-child{ grid-column:1 / -1; } }
 @media (max-width:600px){ .act-head{ padding:34px 0 24px; } .act-band{ padding:44px 0 50px; } .act-glass, .act-igrid{ grid-template-columns:minmax(0,1fr); } .act-int{ padding:46px 0 50px; } }
 .hero-gap { height:48px; }
 @media (max-width:600px){ .hero-gap{ height:28px; } }
@@ -286,7 +286,7 @@ html:root .hero-home .wrap { padding-top:80px; padding-bottom:88px; }
   <div class="wrap">
     <div class="hero-text">
       <span class="qtd-eyebrow">QUỸ TỪ THIỆN XÃ HỘI TRÍ ĐỨC</span>
-      <h1>GIEO MẦM HẠNH PHÚC —<br>THÊM CHÚT AN VUI</h1>
+      <h1>GIEO MẦM HẠNH PHÚC<br>THÊM CHÚT AN VUI</h1>
       <p class="lead">Góp phần tạo nên những giá trị tốt đẹp, bền vững cho cộng đồng.</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;">
         <a href="pages/tintuc.html" class="btn btn-ghost-light">Xem tin tức</a>
@@ -363,6 +363,7 @@ html:root .hero-home .wrap { padding-top:80px; padding-bottom:88px; }
     <div class="act-igrid">
       <div class="act-icard fade-in"><img src="images/hd-noi-bo-tiec-tat-nien.jpg" alt="" loading="lazy"><b class="grad-text">01</b><span>Chăm lo đời sống CBNV Phát Tiến</span><i aria-hidden="true">+</i></div>
       <div class="act-icard fade-in"><img src="images/hd-noi-bo-khuyen-hoc.jpg" alt="" loading="lazy"><b class="grad-text">02</b><span>Khuyến học – Tiếp sức con em CBNV đến trường</span><i aria-hidden="true">+</i></div>
+      <div class="act-icard fade-in"><img src="images/hd-noi-bo-tuong-than.jpg" alt="" loading="lazy"><b class="grad-text">03</b><span>Tương thân tương ái</span><i aria-hidden="true">+</i></div>
     </div>
   </div>
 </section>

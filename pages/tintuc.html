@@ -237,9 +237,11 @@ html.boxed .qtd-footer { margin-top:28px; margin-bottom:20px; }
 .activities-stat-card .stat-label { font-size:13px; color:var(--qtd-text-soft); }
 @media (max-width:700px){ .activities-stat-card{ flex-direction:column; gap:18px; padding:24px 22px; } .activities-stat-card .stat-item{ border-right:none; border-bottom:1px solid var(--qtd-border); padding-bottom:16px; } .activities-stat-card .stat-item:last-child{ border-bottom:none; padding-bottom:0; } }
 
-.activity-layout { display:grid; grid-template-columns:330px minmax(0,1fr); grid-template-areas:"aside main"; gap:32px; align-items:start; }
+html:root .wrap-wide { max-width:1600px; padding-left:32px; padding-right:32px; }
+.activity-layout { display:grid; grid-template-columns:290px minmax(0,1fr); grid-template-areas:"aside main"; gap:28px; align-items:start; }
 .activity-main { grid-area:main; min-width:0; }
 .activity-main .news-grid { grid-template-columns:repeat(3, minmax(0,1fr)); gap:20px; }
+@media (min-width:1400px){ .activity-main .news-grid { grid-template-columns:repeat(4, minmax(0,1fr)); } }
 @media (min-width:1001px) and (max-width:1249px){ .activity-main .news-grid { grid-template-columns:repeat(2, minmax(0,1fr)); } }
 .cat-panel { grid-area:aside; position:sticky; top:96px; background:var(--qtd-white); border:1px solid var(--qtd-border); border-radius:var(--radius-lg); padding:12px; box-shadow:var(--shadow-sm); }
 .cat-list { display:flex; flex-direction:column; gap:2px; }
@@ -296,7 +298,7 @@ html.boxed .qtd-footer { margin-top:28px; margin-bottom:20px; }
 </div>
 
 <section class="section">
-  <div class="wrap">
+  <div class="wrap wrap-wide">
     <div class="activity-layout">
       <aside class="cat-panel" aria-label="Lọc tin tức theo lĩnh vực">
         <div class="cat-list" id="cat-list">
@@ -727,7 +729,7 @@ if (heroSlides.length > 1) {
 </body>
 </html>
 <script>
-const PAGE_SIZE = 9;
+const PAGE_SIZE = 12;
 const catBtns = Array.from(document.querySelectorAll('.cat-btn'));
 let currentCat = 'all';
 const allCards = Array.from(document.querySelectorAll('#activity-grid .news-card'));
